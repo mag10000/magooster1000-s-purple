@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dif2sold0sni2"]
+
+[ext_resource type="Script" uid="uid://dhlpxvg34bcxf" path="res://handles.gd" id="1_n7l54"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_tyee0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq7ho"]
+bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5180901, 0.31678355, 0.71240336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MainWindow" type="Control" unique_id=688536160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1118369675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="Layout" unique_id=112189679]
+layout_mode = 2
+
+[node name="Contents" type="Control" parent="Layout" unique_id=2099078194]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatusBar" type="PanelContainer" parent="Layout" unique_id=668949428]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+theme = ExtResource("1_tyee0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_sq7ho")
+
+[node name="Handles" type="Control" parent="." unique_id=1369183967]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_n7l54")
+
+[node name="Right" type="Control" parent="Handles" unique_id=1287868427]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 10
+
+[node name="Bottom" type="Control" parent="Handles" unique_id=633670391]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 9
+
+[node name="Corner" type="Control" parent="Handles" unique_id=172450927]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 12
+
+[connection signal="gui_input" from="Handles/Right" to="Handles" method="_on_right_gui_input"]
+[connection signal="gui_input" from="Handles/Bottom" to="Handles" method="_on_bottom_gui_input"]
+[connection signal="gui_input" from="Handles/Corner" to="Handles" method="_on_corner_gui_input"]

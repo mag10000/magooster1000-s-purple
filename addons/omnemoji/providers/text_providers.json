@@ -1,0 +1,190 @@
+{
+	"_comment": "OmnEmoji - Text Font Providers. Fonts are listed in recommended order.",
+	"_groups": "1) Noto family (recommended) 2) Popular UI fonts 3) Monospace fonts 4) Extended coverage",
+	"providers": {
+		"noto_sans": {
+			"name": "Noto Sans",
+			"description": "⭐ Recommended default. Google's universal text font with excellent Unicode coverage for Latin, Greek, Cyrillic scripts.",
+			"filename": "NotoSans-Regular.ttf",
+			"subdir": "noto-sans",
+			"size_mb": 0.6,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSans/hinted/ttf/NotoSans-Regular.ttf",
+				"https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v2.015/NotoSans-Regular.ttf"
+			]
+		},
+		"noto_sans_cjk": {
+			"name": "Noto Sans CJK SC",
+			"description": "Noto family CJK extension. Full Chinese, Japanese, Korean support. Use as fallback with Noto Sans.",
+			"filename": "NotoSansCJKsc-Regular.otf",
+			"subdir": "noto-sans-cjk",
+			"size_mb": 90.0,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": true,
+			"zip_filename": "NotoSansCJKsc-Regular.otf",
+			"mirrors": [
+				"https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/08_NotoSansCJKsc.zip"
+			]
+		},
+		"roboto": {
+			"name": "Roboto",
+			"description": "Android's default font. Clean, modern, and highly readable on screens.",
+			"filename": "Roboto-Regular.ttf",
+			"subdir": "roboto",
+			"size_mb": 0.2,
+			"license": "Apache 2.0",
+			"license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/googlefonts/roboto-classic/raw/main/fonts/ttf/Roboto-Regular.ttf"
+			]
+		},
+		"inter": {
+			"name": "Inter",
+			"description": "Modern UI font designed for screens. Highly legible at small sizes.",
+			"filename": "Inter-Regular.otf",
+			"subdir": "inter",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/rsms/inter/raw/master/docs/font-files/Inter-Regular.otf"
+			]
+		},
+		"open_sans": {
+			"name": "Open Sans",
+			"description": "Friendly, open letterforms. Excellent readability for body text.",
+			"filename": "OpenSans-Regular.ttf",
+			"subdir": "open-sans",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/googlefonts/opensans/raw/main/fonts/ttf/OpenSans-Regular.ttf"
+			]
+		},
+		"source_sans": {
+			"name": "Source Sans 3",
+			"description": "Adobe's open source UI font. Professional and neutral appearance.",
+			"filename": "SourceSans3-Regular.ttf",
+			"subdir": "source-sans",
+			"size_mb": 0.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/adobe-fonts/source-sans/raw/release/TTF/SourceSans3-Regular.ttf"
+			]
+		},
+		"lato": {
+			"name": "Lato",
+			"description": "Warm, semi-rounded details. Popular choice for web and games.",
+			"filename": "Lato-Regular.ttf",
+			"subdir": "lato",
+			"size_mb": 0.1,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/latofonts/lato-source/raw/main/fonts/Lato-Regular.ttf"
+			]
+		},
+		"ubuntu": {
+			"name": "Ubuntu",
+			"description": "Canonical's distinctive font. Unique, modern personality.",
+			"filename": "Ubuntu-Regular.ttf",
+			"subdir": "ubuntu",
+			"size_mb": 0.4,
+			"license": "Ubuntu Font License",
+			"license_url": "https://ubuntu.com/legal/font-licence",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/canonical/UbuntuMono-fonts/raw/main/Ubuntu-Regular.ttf"
+			]
+		},
+		"fira_sans": {
+			"name": "Fira Sans",
+			"description": "Mozilla's Firefox OS font. Technical, precise, and readable.",
+			"filename": "FiraSans-Regular.ttf",
+			"subdir": "fira-sans",
+			"size_mb": 0.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/mozilla/Fira/raw/master/ttf/FiraSans-Regular.ttf"
+			]
+		},
+		"jetbrains_mono": {
+			"name": "JetBrains Mono",
+			"description": "⌨️ Monospace. Developer font with ligatures. Perfect for code, terminals, and technical text.",
+			"filename": "JetBrainsMono-Regular.ttf",
+			"subdir": "jetbrains-mono",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Regular.ttf"
+			]
+		},
+		"fira_code": {
+			"name": "Fira Code",
+			"description": "⌨️ Monospace. Popular coding font with programming ligatures. Based on Fira Mono.",
+			"filename": "FiraCode-Regular.ttf",
+			"subdir": "fira-code",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Regular.ttf"
+			]
+		},
+		"source_code_pro": {
+			"name": "Source Code Pro",
+			"description": "⌨️ Monospace. Adobe's coding font. Clean and highly legible for code.",
+			"filename": "SourceCodePro-Regular.ttf",
+			"subdir": "source-code-pro",
+			"size_mb": 0.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/adobe-fonts/source-code-pro/raw/release/TTF/SourceCodePro-Regular.ttf"
+			]
+		},
+		"ubuntu_mono": {
+			"name": "Ubuntu Mono",
+			"description": "⌨️ Monospace. Ubuntu's terminal font. Distinctive and readable.",
+			"filename": "UbuntuMono-Regular.ttf",
+			"subdir": "ubuntu-mono",
+			"size_mb": 0.1,
+			"license": "Ubuntu Font License",
+			"license_url": "https://ubuntu.com/legal/font-licence",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/canonical/UbuntuMono-fonts/raw/main/UbuntuMono-Regular.ttf"
+			]
+		},
+		"gnu_unifont": {
+			"name": "GNU Unifont",
+			"description": "🌐 Maximum coverage. Complete Unicode BMP with 100+ scripts including CJK, Arabic, Hebrew. Bitmap-style appearance.",
+			"filename": "unifont-17.0.03.otf",
+			"subdir": "unifont",
+			"size_mb": 5.0,
+			"license": "GPL 2+ / SIL OFL 1.1",
+			"license_url": "https://unifoundry.com/LICENSE.txt",
+			"zip_download": false,
+			"mirrors": [
+				"https://unifoundry.com/pub/unifont/unifont-17.0.03/font-builds/unifont-17.0.03.otf"
+			]
+		}
+	}
+}

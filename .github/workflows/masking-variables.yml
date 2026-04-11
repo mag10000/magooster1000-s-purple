@@ -1,0 +1,55 @@
+# Display name of workflow
+name: Masking Variables
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+on:
+  workflow_dispatch:
+
+jobs:
+  # Simple Example: Mask a string in the logs
+  demo-basic-masking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mask a simple string
+        run: |
+          echo "::add-mask::MTQ4NTYxMjUwMDg4Mjk1MjI0Mg.GAbaO_.QTN2IlvM-ZnKw_CI0-K4Qxr-4uEvM8WFWDKa88"
+          echo "Discord Token"
+
+  # Mask an environment variable
+  demo-env-var-masking:
+    runs-on: ubuntu-latest
+    env:
+      MY_SECRET: "TopSecretValue"
+    steps:
+      - name: Mask an environment variable
+        run: |
+          echo "::add-mask::$MY_SECRET"
+          echo "The secret value is: $MY_SECRET"
+
+  # Dynamic Masking: mask in one step and use in a different step
+  demo-dynamic-masking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate and mask a dynamic secret
+        id: secret-step
+        run: |
+          DYNAMIC_SECRET=$(openssl rand -hex 16)
+          echo "::add-mask::$DYNAMIC_SECRET"
+          echo "generated-secret=$DYNAMIC_SECRET" >> $GITHUB_OUTPUT
+      - name: Use the masked secret
+        run: echo "The secret is ${{ steps.secret-step.outputs.generated-secret }}"
+
+  # Masking a multi-line value
+  demo-multiline-masking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mask a multi-line value
+        run: |
+          MULTILINE_SECRET="Line 1
+          Line 2
+          Line 3"
+          echo "$MULTILINE_SECRET" | while IFS= read -r line; do
+            echo "::add-mask::$line"
+          done
+          echo "The multi-line secret is:"
+          echo "$MULTILINE_SECRET"

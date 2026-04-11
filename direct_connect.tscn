@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://yhfj65w6jyor"]
+
+[ext_resource type="Script" uid="uid://wcgoddoddiqt" path="res://direct_connect.gd" id="1_ftegl"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_8ed1a"]
+[ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://direct_connect.png" id="3_u78n7"]
+
+[node name="Direct Connect" type="Control" unique_id=286805349]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ftegl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1438836702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.08235294, 0.14509805, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=241759541]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2126736
+anchor_top = 0.12808642
+anchor_right = 1.0
+anchor_bottom = 0.86882716
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8ed1a")
+bbcode_enabled = true
+text = "[b]TEST:[/b] Test Message"
+scroll_following = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="TextEdit" parent="." unique_id=1401606930]
+layout_mode = 0
+anchor_left = 0.484375
+anchor_top = 0.94598764
+anchor_right = 0.8776042
+anchor_bottom = 0.9953704
+theme = ExtResource("2_8ed1a")
+placeholder_text = "message"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="LineEdit" unique_id=728951514]
+layout_mode = 0
+anchor_left = 1.0397351
+anchor_right = 1.1368654
+anchor_bottom = 1.0
+theme = ExtResource("2_8ed1a")
+text = "send"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="TextEdit" parent="LineEdit" unique_id=270746624]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5622952
+anchor_top = 0.018867925
+anchor_right = -0.012605464
+anchor_bottom = 1.0188679
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8ed1a")
+placeholder_text = "player username"
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="RichTextLabel" parent="." unique_id=678727529]
+layout_mode = 0
+anchor_left = 0.26649305
+anchor_right = 0.9609375
+anchor_bottom = 0.13580246
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[b]Inbox"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DirectConnect" type="Sprite2D" parent="." unique_id=936849754]
+position = Vector2(871, 45)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_u78n7")
+
+[connection signal="pressed" from="LineEdit/Button" to="." method="_on_button_pressed"]

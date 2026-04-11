@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://0xklxw3hgltm"]
+
+[ext_resource type="Script" uid="uid://cavfnkf2pr4fh" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dqss6smw7w8nh" path="res://addons/discord_gd/discord.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://chhmldf3w3jsc" path="res://addons/onscreenkeyboard/onscreen_keyboard.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://yhfj65w6jyor" path="res://direct_connect.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c4vdaavl8vyor" path="res://friends.tscn" id="5_kek77"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://mp_text.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://direct_connect.png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://multiple-users-silhouette.png" id="8_5vw27"]
+
+[node name="Main" type="Control" unique_id=2117586105]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="DiscordBot" type="Node" parent="." unique_id=942593038]
+script = ExtResource("2_h2yge")
+metadata/_custom_type_script = "uid://dqss6smw7w8nh"
+
+[node name="OnscreenKeyboard" type="PanelContainer" parent="." unique_id=851869668]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_right = 216.5
+offset_bottom = 144.0
+grow_horizontal = 2
+script = ExtResource("3_h2yge")
+metadata/_custom_type_script = "uid://chhmldf3w3jsc"
+
+[node name="Direct Connect" parent="." unique_id=286805349 instance=ExtResource("4_1bvp3")]
+layout_mode = 1
+
+[node name="Friends" parent="." unique_id=461047778 instance=ExtResource("5_kek77")]
+visible = false
+layout_mode = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=274700190]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.15885417
+anchor_bottom = 1.0
+theme = ExtResource("5_lquwl")
+metadata/_edit_use_anchors_ = true
+
+[node name="MpText" type="Sprite2D" parent="Panel" unique_id=12147103]
+position = Vector2(91, 40)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("6_7mycd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1716391396]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.13473053
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Direct" type="Button" parent="Panel/VBoxContainer" unique_id=730173004]
+layout_mode = 2
+text = "Direct Connect"
+icon = ExtResource("7_272bh")
+expand_icon = true
+
+[node name="Friends" type="Button" parent="Panel/VBoxContainer" unique_id=1002110816]
+layout_mode = 2
+text = "Friends"
+icon = ExtResource("8_5vw27")
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1529666139]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[url=https://www.flaticon.com/free-icons/user]User icons created by Freepik - Flaticon"
+fit_content = true
+
+[connection signal="pressed" from="Panel/VBoxContainer/Direct" to="." method="_on_direct_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Friends" to="." method="_on_friends_pressed"]
+[connection signal="meta_clicked" from="Panel/VBoxContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

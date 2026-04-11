@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://dinwgpuiv257o"]
+
+[ext_resource type="Script" uid="uid://bpwv5tup0jjo3" path="res://godot google auth/main.gd" id="1_0iybi"]
+[ext_resource type="Texture2D" uid="uid://cbnapqe1vjffv" path="res://godot google auth/google.svg" id="2_0xm2m"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_xpbok"]
+[ext_resource type="Texture2D" uid="uid://d0emfp5h74viy" path="res://godot google auth/discord.png" id="3_xrjyt"]
+[ext_resource type="Texture2D" uid="uid://dwkdxy6ibjlfx" path="res://godot google auth/email.png" id="4_5v1yc"]
+[ext_resource type="SpriteFrames" uid="uid://bnyeax4wnpw7t" path="res://tenor.gif" id="4_qvqm1"]
+[ext_resource type="PackedScene" uid="uid://bwh4ytfs4g7js" path="res://addons/talo/samples/authentication/authentication.tscn" id="5_ou3ym"]
+[ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://mp_text.png" id="6_rywpj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+content_margin_left = 15.0
+content_margin_top = 10.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+content_margin_left = 15.0
+content_margin_top = 10.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0.122252, 0.122252, 0.122252, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[node name="Main" type="Control" unique_id=1561955900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0iybi")
+
+[node name="BG" type="ColorRect" parent="." unique_id=197527093]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.08235294, 0.14509805, 1)
+
+[node name="LoginPanel" type="PanelContainer" parent="." unique_id=1729270705]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41145834
+anchor_top = 0.39147997
+anchor_right = 0.5885417
+anchor_bottom = 0.45728546
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xpbok")
+metadata/_edit_use_anchors_ = true
+
+[node name="SignInButton" type="Button" parent="LoginPanel" unique_id=28510795]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_xpbok")
+theme_override_constants/icon_max_width = 24
+disabled = true
+text = "Sign in with Google"
+icon = ExtResource("2_0xm2m")
+
+[node name="LoginPanelDiscord" type="PanelContainer" parent="." unique_id=361999954]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41015625
+anchor_top = 0.48302475
+anchor_right = 0.58984375
+anchor_bottom = 0.55092597
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xpbok")
+metadata/_edit_use_anchors_ = true
+
+[node name="SignInButtonDiscord" type="Button" parent="LoginPanelDiscord" unique_id=536026035]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_xpbok")
+theme_override_constants/icon_max_width = 24
+disabled = true
+text = "Sign in with Discord"
+icon = ExtResource("3_xrjyt")
+
+[node name="LoginPanelEmail" type="PanelContainer" parent="." unique_id=310895611]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41015625
+anchor_top = 0.57870376
+anchor_right = 0.58984375
+anchor_bottom = 0.646605
+offset_bottom = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xpbok")
+metadata/_edit_use_anchors_ = true
+
+[node name="SignInButtonEmail" type="Button" parent="LoginPanelEmail" unique_id=959985562]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_xpbok")
+theme_override_constants/icon_max_width = 24
+disabled = true
+text = "Sign in with Email"
+icon = ExtResource("4_5v1yc")
+
+[node name="SignedInPanel" type="PanelContainer" parent="." unique_id=855735624]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14409722
+anchor_top = -0.5636228
+anchor_right = 0.8559028
+anchor_bottom = 1.5097306
+offset_left = 195.0
+offset_top = 509.5
+offset_right = -195.0
+offset_bottom = -509.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SignedInPanel" unique_id=211811533]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="avatar" type="TextureRect" parent="SignedInPanel/VBoxContainer" unique_id=568296225]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SignedInPanel/VBoxContainer/avatar" unique_id=384891904]
+self_modulate = Color(0.86036915, 0.8603692, 0.8603692, 1)
+position = Vector2(32.1, 24.900005)
+scale = Vector2(0.13614458, 0.14417669)
+sprite_frames = ExtResource("4_qvqm1")
+animation = &"gif"
+autoplay = "gif"
+frame_progress = 0.017323377
+speed_scale = 1.7
+
+[node name="Header" type="RichTextLabel" parent="SignedInPanel/VBoxContainer" unique_id=738237497]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][font_size=20]You are signed in![/font_size][/b]"
+fit_content = true
+
+[node name="email" type="RichTextLabel" parent="SignedInPanel/VBoxContainer" unique_id=1447621542]
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=15]Your email: [/font_size]"
+fit_content = true
+
+[node name="userid" type="RichTextLabel" parent="SignedInPanel/VBoxContainer" unique_id=902150783]
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=15]Your user id: [/font_size]"
+fit_content = true
+
+[node name="username" type="RichTextLabel" parent="SignedInPanel/VBoxContainer" unique_id=108952903]
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=15]Your name: [/font_size]"
+fit_content = true
+
+[node name="Container" type="Control" parent="SignedInPanel/VBoxContainer" unique_id=1871540380]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="SignoutButtonContainer" type="HBoxContainer" parent="SignedInPanel/VBoxContainer" unique_id=788192095]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="SignOutButton" type="Button" parent="SignedInPanel/VBoxContainer/SignoutButtonContainer" unique_id=241501047]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lquwl")
+text = "Sign Out"
+
+[node name="avatarrequest" type="HTTPRequest" parent="." unique_id=353503271]
+
+[node name="MpText" type="TextureRect" parent="." unique_id=402309019]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = -35.999996
+offset_right = 1800.0
+offset_bottom = 1964.0
+grow_horizontal = 2
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+texture = ExtResource("6_rywpj")
+
+[node name="Authentication" parent="." unique_id=779908945 instance=ExtResource("5_ou3ym")]
+visible = false
+
+[node name="MpText2" type="TextureRect" parent="." unique_id=227489538]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.99997
+offset_top = -89.0
+offset_right = 1850.0
+offset_bottom = 1911.0
+grow_horizontal = 2
+scale = Vector2(0.15, 0.15)
+mouse_filter = 2
+texture = ExtResource("6_rywpj")
+
+[connection signal="pressed" from="LoginPanel/SignInButton" to="." method="_on_sign_in_button_pressed"]
+[connection signal="pressed" from="LoginPanelDiscord/SignInButtonDiscord" to="." method="_on_sign_in_button_discord_pressed"]
+[connection signal="pressed" from="LoginPanelEmail/SignInButtonEmail" to="." method="_on_sign_in_button_email_pressed"]
+[connection signal="pressed" from="SignedInPanel/VBoxContainer/SignoutButtonContainer/SignOutButton" to="." method="_on_sign_out_button_pressed"]
+[connection signal="request_completed" from="avatarrequest" to="." method="_on_avatarrequest_request_completed"]

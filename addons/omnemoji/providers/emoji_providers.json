@@ -1,0 +1,93 @@
+{
+	"_comment": "OmnEmoji - Emoji Font Providers. Add custom providers here.",
+	"_format_info": {
+		"name": "Display name",
+		"description": "Short description",
+		"filename": "Local filename after download",
+		"subdir": "Subdirectory in third_party/",
+		"size_mb": "Approximate download size in MB",
+		"license": "License type",
+		"license_url": "URL to license",
+		"format": "Font format (CBDT/CBLC, SVGinOT, COLR, etc.)",
+		"zip_download": "true if mirrors point to ZIP files",
+		"zip_filename": "Path inside ZIP to extract (if zip_download)",
+		"mirrors": "Array of download URLs, tried in order"
+	},
+	"providers": {
+		"noto": {
+			"name": "Noto Color Emoji",
+			"description": "Google's comprehensive color emoji font. Best compatibility with Godot.",
+			"filename": "NotoColorEmoji.ttf",
+			"subdir": "noto-emoji",
+			"size_mb": 10.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"format": "CBDT/CBLC",
+			"recommended": true,
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf",
+				"https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/fonts/NotoColorEmoji.ttf"
+			]
+		},
+		"openmoji": {
+			"name": "OpenMoji",
+			"description": "Open-source emoji with consistent style. Great for games.",
+			"filename": "OpenMoji-color-cbdt.ttf",
+			"subdir": "openmoji",
+			"size_mb": 52.0,
+			"license": "CC BY-SA 4.0",
+			"license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+			"format": "CBDT/CBLC",
+			"zip_download": true,
+			"zip_filename": "OpenMoji-color-cbdt/OpenMoji-color-cbdt.ttf",
+			"mirrors": [
+				"https://github.com/hfg-gmuend/openmoji/releases/latest/download/openmoji-font.zip"
+			]
+		},
+		"twemoji": {
+			"name": "Twemoji",
+			"description": "Twitter/X emoji set (Mozilla COLR build). Familiar social media style.",
+			"filename": "Twemoji.Mozilla.ttf",
+			"subdir": "twemoji",
+			"size_mb": 1.2,
+			"license": "CC BY 4.0 / MIT",
+			"license_url": "https://github.com/mozilla/twemoji-colr",
+			"format": "COLR/CPAL",
+			"zip_download": false,
+			"mirrors": [
+				"https://github.com/mozilla/twemoji-colr/releases/download/v0.7.0/Twemoji.Mozilla.ttf"
+			]
+		},
+		"emojione": {
+			"name": "EmojiOne Color",
+			"description": "Adobe's open-source color emoji font (legacy EmojiOne style).",
+			"filename": "EmojiOneColor.otf",
+			"subdir": "emojione",
+			"size_mb": 25.0,
+			"license": "SIL OFL 1.1 / CC BY 4.0",
+			"license_url": "https://github.com/adobe-fonts/emojione-color",
+			"format": "SVGinOT",
+			"zip_download": true,
+			"zip_filename": "emojione-color-1.000/EmojiOneColor.otf",
+			"mirrors": [
+				"https://github.com/adobe-fonts/emojione-color/archive/refs/tags/1.000.zip"
+			]
+		},
+		"fluent": {
+			"name": "Fluent Emoji",
+			"description": "Microsoft's 3D-style emoji. Large file (~88MB TTF).",
+			"filename": "FluentEmojiColor.ttf",
+			"subdir": "fluent-emoji",
+			"size_mb": 88.0,
+			"license": "MIT",
+			"license_url": "https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE",
+			"format": "CBDT/CBLC",
+			"zip_download": true,
+			"zip_filename": "fluent-emoji-webfont-0.8.5/dist/FluentEmojiColor.ttf",
+			"mirrors": [
+				"https://github.com/tetunori/fluent-emoji-webfont/archive/refs/tags/v0.8.5.zip"
+			]
+		}
+	}
+}

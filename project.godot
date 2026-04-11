@@ -1,0 +1,64 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="purple"
+run/main_scene="uid://0xklxw3hgltm"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.101960786, 0.08235294, 0.14509805, 1)
+boot_splash/stretch_mode=3
+boot_splash/image="uid://bqhy6lf0krms2"
+config/icon="uid://2qqerm1okbdh"
+boot_splash/minimum_display_time=8
+
+[autoload]
+
+Token="*uid://ychxqfyklqqk"
+Talo="*uid://bpmdn8oc34pg7"
+Saver="*uid://bog3saou5uity"
+SupabaseAuth="*uid://c7gpms5gn3o73"
+account="*uid://i8tujkd2hcjk"
+Console="*uid://pxau0xoa5dnp"
+
+[display]
+
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/omnemoji/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+
+[gdss]
+
+internal/initialized=true
+editor/use_minimap=true
+
+[gui]
+
+theme/custom_font="res://addons/omnemoji/resources/OmnEmojiMerged.tres"
+
+[omnemoji]
+
+emoji_provider=0
+custom_text_font="uid://gjhkaynkdum0"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.101960786, 0.08235294, 0.14509805, 1)

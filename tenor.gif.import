@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://bnyeax4wnpw7t"
+path="res://.godot/imported/tenor.gif-21d07a4f0a35adfb259c378e97af89a1.tres"
+
+[deps]
+
+source_file="res://tenor.gif"
+dest_files=["res://.godot/imported/tenor.gif-21d07a4f0a35adfb259c378e97af89a1.tres"]
+
+[params]
+
+frames_per_second=30

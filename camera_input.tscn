@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dommctfgmfg8m"]
+
+[ext_resource type="Texture2D" uid="uid://2rhtpg25pwlr" path="res://nofeed.png" id="1_0xy08"]
+[ext_resource type="Script" uid="uid://m1b83lm6sf2f" path="res://cam_tex.gd" id="2_mtv21"]
+
+[node name="camera input" type="Control" unique_id=739310132]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cam_tex" type="TextureRect" parent="." unique_id=1768288883]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0xy08")
+script = ExtResource("2_mtv21")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=236426635]
+position = Vector2(576, 334)
+
+[node name="bar" type="Panel" parent="." unique_id=1542647558]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="bar" unique_id=460343105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="bar/HBoxContainer" unique_id=1915442258]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32

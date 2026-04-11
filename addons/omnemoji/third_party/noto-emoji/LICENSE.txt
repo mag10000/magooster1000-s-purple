@@ -1,0 +1,6 @@
+Font: Noto Color Emoji
+License: SIL OFL 1.1
+License URL: https://openfontlicense.org/
+
+Downloaded by OmnEmoji addon for Godot.
+See the license URL above for full license terms.

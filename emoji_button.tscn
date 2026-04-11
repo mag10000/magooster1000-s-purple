@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://e0udgbms67f3"]
+
+[node name="EmojiButton" type="Button" unique_id=1010414271]
+flat = true
