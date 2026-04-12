@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bhtittmg0cwb8"
+path="res://.godot/imported/NotoSans-Italic.ttf-3688f85c63ca944f11b140f6828139b0.fontdata"
+
+[deps]
+
+source_file="res://noto sans/fonts to use/NotoSans-Italic.ttf"
+dest_files=["res://.godot/imported/NotoSans-Italic.ttf-3688f85c63ca944f11b140f6828139b0.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[Resource("uid://gjhkaynkdum0", "res://NotoColorEmoji-Regular.ttf"), Resource("uid://w7lpoe5jm0u2", "res://noto sans/Noto_Sans_JP/static/NotoSansJP-Regular.ttf"), Resource("uid://qr6g363xg48y", "res://noto sans/Noto_Sans_KR/static/NotoSansKR-Regular.ttf"), Resource("uid://b2ggdibuulib0", "res://noto sans/Noto_Sans_SC/static/NotoSansSC-Regular.ttf"), Resource("uid://cfle100pajoh8", "res://noto sans/Noto_Sans_TC/static/NotoSansTC-Regular.ttf"), Resource("uid://daglgosko1j23", "res://noto sans/Noto_Sans_Telugu/static/NotoSansTelugu-Light.ttf")]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

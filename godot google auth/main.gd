@@ -55,17 +55,17 @@ func _show_login_ui():
 	# Show login button
 	LoginPanel.visible = true
 	sign_in_button.disabled = false
-	sign_in_button.text = "Sign in with Google"
+	sign_in_button.text = tr("Sign in with Google")
 
 	$LoginPanelDiscord.visible = true
 	$LoginPanelDiscord/SignInButtonDiscord.disabled = false
-	$LoginPanelDiscord/SignInButtonDiscord.text = "Sign in with Discord"
+	$LoginPanelDiscord/SignInButtonDiscord.text = tr("Sign in with Discord")
 	$SignedInPanel/VBoxContainer/avatar/AnimatedSprite2D.show()
 	$SignedInPanel/VBoxContainer/avatar.texture = null
 	
 	$LoginPanelEmail.visible = true
 	$LoginPanelEmail/SignInButtonEmail.disabled = false
-	$LoginPanelEmail/SignInButtonEmail.text = "Sign in with Email"
+	$LoginPanelEmail/SignInButtonEmail.text = tr("Sign in with Email")
 	
 	
 	# Hide user info panel
@@ -88,8 +88,8 @@ func _show_authenticated_ui(session: Dictionary):
 	authed = true
 	
 	var user = session.get("user", {})
-	email_label.text = "Email: " + user.get("email", "Unknown")
-	user_id_label.text = "User ID: " + user.get("id", "Unknown")
+	email_label.text = tr("Email: ") + user.get("email", "Unknown")
+	user_id_label.text = tr("User ID: ") + user.get("id", "Unknown")
 	
 	user_globe = user
 	
@@ -101,21 +101,21 @@ func _show_authenticated_ui(session: Dictionary):
 	if ident.has("custom_claims"):
 		var claims = ident.custom_claims
 		if claims.has("global_name"):
-			$SignedInPanel/VBoxContainer/username.text = "Name: " + claims.global_name
+			$SignedInPanel/VBoxContainer/username.text = tr("Name: ") + claims.global_name
 			_name = claims.global_name
 		else:
 			if ident.has("full_name"):
-				$SignedInPanel/VBoxContainer/username.text = "Name: " + ident.full_name
+				$SignedInPanel/VBoxContainer/username.text = tr("Name: ") + ident.full_name
 				_name = ident.full_name
 			elif ident.has("name"):
-				$SignedInPanel/VBoxContainer/username.text = "Name: " + ident.name
+				$SignedInPanel/VBoxContainer/username.text = tr("Name: ") + ident.name
 				_name = ident.name
 	else:
 		if ident.has("full_name"):
-			$SignedInPanel/VBoxContainer/username.text = "Name: " + ident.full_name
+			$SignedInPanel/VBoxContainer/username.text = tr("Name: ") + ident.full_name
 			_name = ident.full_name
 		elif ident.has("name"):
-			$SignedInPanel/VBoxContainer/username.text = "Name: " + ident.name
+			$SignedInPanel/VBoxContainer/username.text = tr("Name: ") + ident.name
 			_name = ident.name
 	
 	if ident.has("avatar_url"):
@@ -137,7 +137,7 @@ func identified(player):
 	$Authentication.show()
 	
 	
-	Talo.events.track("Auth", {
+	Talo.events.track("Supabase Auth", {
 		"Time": str(Time.get_time_string_from_system()),
 		"Id" : user.get("id", "Unknown"),
 		"Email" : user.get("email", "Unknown"),
@@ -146,19 +146,6 @@ func identified(player):
 	})
 	Talo.events.flush()
 	Talo.channels.get_channels()
-	
-	var options := Talo.channels.GetChannelsOptions.new()
-	options.page = 0
-	var res := await Talo.channels.get_channels(options)
-	var channels: = res.channels
-	var has_personal_channel = false
-	for channel in channels:
-		if channel.name == _name + Talo.current_player.id:
-			has_personal_channel = true
-			account.channel_id = channel.id
-	
-	if not has_personal_channel:
-		create_channel(_name + Talo.current_player.id)
 
 
 
@@ -174,7 +161,7 @@ func create_channel(_name):
 
 func _on_sign_in_button_pressed() -> void:
 	sign_in_button.disabled = true
-	sign_in_button.text = "Opening browser for authentication..."
+	sign_in_button.text = tr("Opening browser for authentication...")
 	
 	SupabaseAuth.provider = "google"
 	SupabaseAuth.sign_in_with_google()
@@ -189,7 +176,7 @@ func _on_sign_out_button_pressed() -> void:
 
 func _on_sign_in_button_discord_pressed():
 	$LoginPanelDiscord/SignInButtonDiscord.disabled = true
-	$LoginPanelDiscord/SignInButtonDiscord.text = "Opening browser for authentication..."
+	$LoginPanelDiscord/SignInButtonDiscord.text = tr("Opening browser for authentication...")
 	
 	SupabaseAuth.provider = "discord"
 	SupabaseAuth.sign_in_with_google()

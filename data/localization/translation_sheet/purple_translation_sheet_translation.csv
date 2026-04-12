@@ -1,0 +1,39 @@
+key,en,es,ja,ko,zh_Hans,zh_Hant,fr,hi,pt_BR,de,,notes:
+Laung_Name,English,Spansish,japaneese,korean,Simplified chineese,Traditional chineese,french,hindi,brazillian portchaguess,german,,If the text says \n delete it for laungages other than english. the \n means new line
+Sign in with Google,Sign in with Google,Iniciar sesión con Google,,,,,,,,,,"If the text says %s that is a way to insert text inside there. it would most likely be the player name, use context when deciding what the %s is."
+Sign in with Discord,Sign in with Discord,Iniciar sesión con Discord,,,,,,,,,,identifier is basicly just the username
+Sign in with Email,Sign in with Email,Iniciar sesión con correo electrónico,,,,,,,,,,Before Translating check if there are spaces the spaces are important
+Email: ,Email: ,Correo electrónico: ,,,,,,,,,,zh_Hans =  Simplified chineese
+User ID: ,User ID: ,ID de usuario: ,,,,,,,,,,zh_Hans = Traditional chineese
+Name: ,Name: ,Nombre: ,,,,,,,,,,pt_BR = brazillian portchaguess
+Opening browser for authentication...,Opening browser for authentication...,Abriendo el navegador web para la autenticación...,,,,,,,,,,
+Sign Out,Sign Out,Desconectar,,,,,,,,,,
+[b][font_size=20]You are signed in![/font_size][/b],[b][font_size=20]You are signed in![/font_size][/b],[b][font_size=20]¡Has iniciado sesión![/font_size][/b],,,,,,,,,,
+Username,Username,Nombre de usuario,,,,,,,,,,
+Password,Password,Contraseña,,,,,,,,,,
+Submit,Submit,Entregar,,,,,,,,,,
+Forgot password,Forgot password,No sé mi contraseña.,,,,,,,,,,
+Go to Register,Go to Register,Ir al registro,,,,,,,,,,
+Login,Login,Iniciar sesión,,,,,,,,,,
+Username or password is incorrect,Username or password is incorrect,El nombre de usuario o la contraseña son incorrectos.,,,,,,,,,,
+Username is already taken,Username is already taken,El nombre de usuario ya está ocupado.,,,,,,,,,,
+Invalid email address,Invalid email address,Dirección de correo electrónico no válida,,,,,,,,,,
+"What would you like to do,","What would you like to do,",¿Qué te gustaría hacer,,,,,,,,,,
+Register,Register,registro,,,,,,,,,,
+Email address,Email address,Correo electrónico,,,,,,,,,,
+Go to Login,Go to Login,Ir a Iniciar sesión,,,,,,,,,,
+Home,Home,Hogar,,,,,,,,,,
+Change password,Change password,Cambiar la contraseña,,,,,,,,,,
+Change email,Change email,Cambiar correo electrónico,,,,,,,,,,
+Change identifier,Change identifier,Cambiar nombre de usuario,,,,,,,,,,
+Log out,Log out,Finalizar la sesión,,,,,,,,,,
+Delete account,Delete account,Eliminar cuenta,,,,,,,,,,
+Verify,Verify,Verificar,,,,,,,,,,
+Current password,Current password,Contraseña actual,,,,,,,,,,
+New email,New email,Nuevo correo electrónico,,,,,,,,,,
+Cancel,Cancel,Cancelar,,,,,,,,,,
+New identifier,New identifier,Nuevo nombre de usuario,,,,,,,,,,
+New password,New password,New password,,,,,,,,,,
+Reset password,Reset password,Restablecer contraseña,,,,,,,,,,
+Code,Code,Código de correo electrónico,,,,,,,,,,
+Verification code,Verification code,Código de verificación,,,,,,,,,,

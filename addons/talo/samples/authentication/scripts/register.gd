@@ -12,26 +12,26 @@ func _on_submit_button_pressed() -> void:
 	validation_label.text = ""
 
 	if not username.text:
-		validation_label.text = "Username is required"
+		validation_label.text = tr("Username is required")
 		return
 
 	if not password.text:
-		validation_label.text = "Password is required"
+		validation_label.text = tr("Password is required")
 		return
 
 	if enable_verification.button_pressed and not email.text:
-		validation_label.text = "Email is required when verification is enabled"
+		validation_label.text = tr("Email is required when verification is enabled")
 		return
 
 	var res := await Talo.player_auth.register(username.text, password.text, email.text, enable_verification.button_pressed)
 	if res != OK:
 		match Talo.player_auth.last_error.get_code():
 			TaloAuthError.ErrorCode.IDENTIFIER_TAKEN:
-				validation_label.text = "Username is already taken"
+				validation_label.text = tr("Username is already taken")
 			TaloAuthError.ErrorCode.INVALID_EMAIL:
-				validation_label.text = "Invalid email address"
+				validation_label.text = tr("Invalid email address")
 			_:
-				validation_label.text = Talo.player_auth.last_error.get_string()
+				validation_label.text = tr(Talo.player_auth.last_error.get_string())
 	else:
 		account.usrn = username.text
 		account.logged_in = true

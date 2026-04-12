@@ -25,7 +25,6 @@ func _ready():
 	add_child(http_request)
 	http_request.request_completed.connect(_on_request_completed)
 
-var cef_texture : CefTexture
 
 func sign_in_with_google():
 	_generate_pkce_params()

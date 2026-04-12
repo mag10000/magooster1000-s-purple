@@ -3,8 +3,17 @@ extends Node
 var channel_id
 var usrn = ""
 var logged_in = false
+var purple_version = "1.0.0"
+var version_label = "dev"
+var theme = "base theme"
+var settings_loaded = false
+var settings = {}
+var theme_data = {"name" : "base theme","base" : true}
 
 func _ready():
+	var window_bar = preload("res://main_window.tscn")
+	var instance = window_bar.instantiate()
+	add_child(instance)
 	get_window().title = "MP - magooster1000's purple"
 	Console._toogle_key = KEY_BACKSLASH
 	Console.enable_console = true

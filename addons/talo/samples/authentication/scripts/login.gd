@@ -12,11 +12,11 @@ func _on_submit_pressed() -> void:
 	validation_label.text = ""
 
 	if not username.text:
-		validation_label.text = "Username is required"
+		validation_label.text = tr("Username is required")
 		return
 
 	if not password.text:
-		validation_label.text = "Password is required"
+		validation_label.text = tr("Password is required")
 		return
 
 	var res := await Talo.player_auth.login(username.text, password.text)
@@ -24,9 +24,9 @@ func _on_submit_pressed() -> void:
 		Talo.player_auth.LoginResult.FAILED:
 			match Talo.player_auth.last_error.get_code():
 				TaloAuthError.ErrorCode.INVALID_CREDENTIALS:
-					validation_label.text = "Username or password is incorrect"
+					validation_label.text = tr("Username or password is incorrect")
 				_:
-					validation_label.text = Talo.player_auth.last_error.get_string()
+					validation_label.text = tr(Talo.player_auth.last_error.get_string())
 		Talo.player_auth.LoginResult.VERIFICATION_REQUIRED:
 			verification_required.emit()
 		Talo.player_auth.LoginResult.OK:

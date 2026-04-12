@@ -1,4 +1,7 @@
 [gd_scene format=3 uid="uid://e0udgbms67f3"]
 
+[ext_resource type="FontFile" uid="uid://dtwf67p02axqi" path="res://noto sans/Noto_Sans_Color_Emoji/NotoColorEmoji-Regular.ttf" id="1_1y24a"]
+
 [node name="EmojiButton" type="Button" unique_id=1010414271]
+theme_override_fonts/font = ExtResource("1_1y24a")
 flat = true

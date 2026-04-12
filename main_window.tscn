@@ -1,7 +1,47 @@
 [gd_scene format=3 uid="uid://dif2sold0sni2"]
 
+[ext_resource type="Script" uid="uid://cka4w77qu2fn3" path="res://main_window.gd" id="1_1rr46"]
 [ext_resource type="Script" uid="uid://dhlpxvg34bcxf" path="res://handles.gd" id="1_n7l54"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_tyee0"]
+[ext_resource type="Script" uid="uid://ce8aic01h370y" path="res://top_bar.gd" id="2_5y2nw"]
+[ext_resource type="Texture2D" uid="uid://eu2pkhh8t87o" path="res://Picol-Picol-Settings.512.png" id="2_eqarp"]
+[ext_resource type="Script" uid="uid://csjjld44xxaat" path="res://window_title.gd" id="2_sq7ho"]
+[ext_resource type="Texture2D" uid="uid://b4pspnmr3naer" path="res://Pictogrammers-Material-Account.512.png" id="3_5y2nw"]
+[ext_resource type="Texture2D" uid="uid://vm8kqc3q4r0n" path="res://Pictogrammers-Material-Window-minimize.512.png" id="4_1rr46"]
+[ext_resource type="Texture2D" uid="uid://b3t64hw51rm2f" path="res://Pictogrammers-Material-Window-maximize.512.png" id="5_fc6ls"]
+[ext_resource type="Texture2D" uid="uid://d0ycrl2tlgmog" path="res://Pictogrammers-Material-Window-close.512.png" id="6_0oce6"]
+[ext_resource type="Script" uid="uid://dswe67ryn0j81" path="res://settings.gd" id="10_fc6ls"]
+[ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://theme.gd" id="11_0oce6"]
+[ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_o2qoy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyee0"]
+bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5180901, 0.31678355, 0.71240336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sq7ho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc6ls"]
+bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5180901, 0.31678355, 0.71240336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_1rr46"]
+thickness = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq7ho"]
 bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
@@ -22,6 +62,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1rr46")
 
 [node name="Layout" type="VBoxContainer" parent="." unique_id=1118369675]
 layout_mode = 1
@@ -30,20 +71,168 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="TopBar" type="PanelContainer" parent="Layout" unique_id=112189679]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+theme = ExtResource("1_tyee0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tyee0")
+script = ExtResource("2_5y2nw")
+
+[node name="HBox" type="HBoxContainer" parent="Layout/TopBar" unique_id=1255328979]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="SettingsButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=2095647701]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+texture_normal = ExtResource("2_eqarp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AccountButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1698349471]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+texture_normal = ExtResource("3_5y2nw")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="Layout/TopBar/HBox" unique_id=1595130748]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_sq7ho")
+
+[node name="MinimizeButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1726649779]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+texture_normal = ExtResource("4_1rr46")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MaxmizeButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1108502701]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+texture_normal = ExtResource("5_fc6ls")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CloseButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=695593794]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+texture_normal = ExtResource("6_0oce6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WindowTitle" type="Label" parent="Layout/TopBar" unique_id=969166901]
+layout_mode = 2
+text = "Magooster1000's Purple"
+horizontal_alignment = 1
+script = ExtResource("2_sq7ho")
 
 [node name="Contents" type="Control" parent="Layout" unique_id=2099078194]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="settings" type="Control" parent="Layout/Contents" unique_id=1473840516]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_fc6ls")
+
+[node name="Panel" type="Panel" parent="Layout/Contents/settings" unique_id=1826715259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tyee0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Contents/settings/Panel" unique_id=52984816]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 443.0
+offset_top = 17.0
+offset_right = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+
+[node name="CheckButtonStatusBar" type="CheckButton" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=2075591647]
+layout_mode = 2
+button_pressed = true
+text = "show status bar"
+icon_alignment = 1
+
+[node name="theme" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1421109434]
+layout_mode = 2
+script = ExtResource("11_0oce6")
+
+[node name="TextEditTheme" type="TextEdit" parent="Layout/Contents/settings/Panel/VBoxContainer/theme" unique_id=1787510269]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_tyee0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fc6ls")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_fc6ls")
+text = "Theme: Main Theme"
+editable = false
+
+[node name="ChooseThemeButton" type="Button" parent="Layout/Contents/settings/Panel/VBoxContainer/theme" unique_id=1784752610]
+layout_mode = 2
+text = "Choose.."
+
+[node name="laungage" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=984454809]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=546368257]
+layout_mode = 2
+text = "language:"
+
+[node name="LanguageOptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=1810786834]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_tyee0")
+script = ExtResource("12_o2qoy")
+metadata/_custom_type_script = "uid://clmda7v77agc4"
+
+[node name="HSeparator" type="HSeparator" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1627232632]
+layout_mode = 2
+theme_override_constants/separation = 22
+theme_override_styles/separator = SubResource("StyleBoxLine_1rr46")
+
+[node name="Button" type="Button" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=726928350]
+layout_mode = 2
+text = "Save"
 
 [node name="StatusBar" type="PanelContainer" parent="Layout" unique_id=668949428]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 theme = ExtResource("1_tyee0")
 theme_override_styles/panel = SubResource("StyleBoxFlat_sq7ho")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout/StatusBar" unique_id=450756839]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/StatusBar/HBoxContainer" unique_id=675191716]
+layout_mode = 2
+text = "Magooster1000's purple v 1.0.0 - dev - base theme"
+
+[node name="account" type="Label" parent="Layout/StatusBar/HBoxContainer" unique_id=1444591766]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Magooster1000"
 
 [node name="Handles" type="Control" parent="." unique_id=1369183967]
 layout_mode = 1
@@ -91,6 +280,13 @@ grow_horizontal = 0
 grow_vertical = 0
 mouse_default_cursor_shape = 12
 
+[connection signal="gui_input" from="Layout/TopBar" to="Layout/TopBar" method="_on_gui_input"]
+[connection signal="pressed" from="Layout/TopBar/HBox/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Layout/TopBar/HBox/AccountButton" to="." method="_on_account_button_pressed"]
+[connection signal="pressed" from="Layout/TopBar/HBox/MinimizeButton" to="Layout/TopBar" method="_on_minimize_button_pressed"]
+[connection signal="pressed" from="Layout/TopBar/HBox/MaxmizeButton" to="Layout/TopBar" method="_on_maxmize_button_pressed"]
+[connection signal="pressed" from="Layout/TopBar/HBox/CloseButton" to="Layout/TopBar" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Layout/Contents/settings/Panel/VBoxContainer/Button" to="Layout/Contents/settings" method="_on_button_pressed"]
 [connection signal="gui_input" from="Handles/Right" to="Handles" method="_on_right_gui_input"]
 [connection signal="gui_input" from="Handles/Bottom" to="Handles" method="_on_bottom_gui_input"]
 [connection signal="gui_input" from="Handles/Corner" to="Handles" method="_on_corner_gui_input"]

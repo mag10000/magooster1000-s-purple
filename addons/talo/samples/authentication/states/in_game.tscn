@@ -45,47 +45,56 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 theme = ExtResource("2_bpbli")
-text = "What would you like to do,
-{username}?"
+text = "What would you like to do,"
+horizontal_alignment = 1
+
+[node name="Usernameacutual" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer" unique_id=50155949]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[b]{Username}?"
+fit_content = true
 horizontal_alignment = 1
 
 [node name="Home" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=550694847]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")
+disabled = true
 text = "Home"
 
 [node name="ChangePassword" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=2046923261]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")
 text = "Change password"
 
 [node name="ChangeEmail" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1905951656]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")
 text = "Change email"
 
 [node name="ChangeIdentifier" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1344734503]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")
 text = "Change identifier"
 
 [node name="Logout" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1922827857]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")
 text = "Log out"
 
 [node name="Delete" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1747733249]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(235, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_bpbli")

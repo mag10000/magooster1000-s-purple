@@ -26,7 +26,7 @@ color = Color(0.101960786, 0.08235294, 0.14509805, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2126736
-anchor_top = 0.12808642
+anchor_top = 0.20061728
 anchor_right = 1.0
 anchor_bottom = 0.86882716
 grow_horizontal = 2
@@ -38,11 +38,12 @@ scroll_following = true
 metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="TextEdit" parent="." unique_id=1401606930]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.21354167
-anchor_top = 0.94598764
+anchor_top = 0.8765432
 anchor_right = 0.9192708
-anchor_bottom = 0.9953704
+anchor_bottom = 0.9259259
 theme = ExtResource("2_kuxn5")
 placeholder_text = "message"
 metadata/_edit_use_anchors_ = true
@@ -57,10 +58,12 @@ text = "send"
 metadata/_edit_use_anchors_ = true
 
 [node name="title" type="RichTextLabel" parent="." unique_id=678727529]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.26649305
+anchor_top = 0.058641974
 anchor_right = 0.9609375
-anchor_bottom = 0.13580246
+anchor_bottom = 0.19444445
 theme_override_font_sizes/normal_font_size = 64
 theme_override_font_sizes/bold_font_size = 64
 bbcode_enabled = true
@@ -71,7 +74,7 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="MultipleUsersSilhouette" type="Sprite2D" parent="." unique_id=803710918]
-position = Vector2(833, 44.000004)
+position = Vector2(833, 82)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("3_kuxn5")
 

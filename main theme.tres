@@ -1,6 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://bjkj60su1coln"]
 
-[ext_resource type="FontVariation" uid="uid://o2cnj8tftb6v" path="res://addons/omnemoji/resources/OmnEmojiMerged.tres" id="1_j7sg8"]
+[ext_resource type="FontFile" uid="uid://c0ofh7qs5h73k" path="res://noto sans/fonts to use/NotoSans-Regular.ttf" id="1_mimdh"]
+[ext_resource type="FontFile" uid="uid://cp7cvxqn7u1ps" path="res://noto sans/fonts to use/NotoSans-Bold.ttf" id="2_vxho7"]
+[ext_resource type="FontFile" uid="uid://8yc0f7bojctu" path="res://noto sans/fonts to use/NotoSans-BoldItalic.ttf" id="3_gg58a"]
+[ext_resource type="FontFile" uid="uid://bhtittmg0cwb8" path="res://noto sans/fonts to use/NotoSans-Italic.ttf" id="4_5t1xy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3ajw"]
 bg_color = Color(0.03419204, 0.030810762, 0.05274579, 1)
@@ -81,12 +84,24 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_j7sg8")
+Button/fonts/font = ExtResource("1_mimdh")
 Button/styles/disabled = SubResource("StyleBoxFlat_g3ajw")
 Button/styles/focus = SubResource("StyleBoxFlat_kigbd")
 Button/styles/hover = SubResource("StyleBoxFlat_kigbd")
 Button/styles/normal = SubResource("StyleBoxFlat_j7sg8")
 Button/styles/pressed = SubResource("StyleBoxFlat_mimdh")
+OptionButton/fonts/font = ExtResource("1_mimdh")
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/disabled_mirrored = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/hover_pressed = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_j7sg8")
+OptionButton/styles/pressed_mirrored = SubResource("StyleBoxFlat_j7sg8")
 Panel/styles/panel = SubResource("StyleBoxFlat_j7sg8")
 RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
 RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
@@ -96,6 +111,10 @@ RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
 RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
 RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
 RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/fonts/bold_font = ExtResource("2_vxho7")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_gg58a")
+RichTextLabel/fonts/italics_font = ExtResource("4_5t1xy")
+RichTextLabel/fonts/normal_font = ExtResource("1_mimdh")
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_vxho7")
 TextEdit/colors/background_color = Color(0.4216497, 0.12322412, 0.29747176, 0)
 TextEdit/colors/caret_background_color = Color(0.21283859, 0.43992257, 1, 1)
@@ -111,5 +130,6 @@ TextEdit/colors/search_result_border_color = Color(0.3, 0.3, 0.3, 0.4)
 TextEdit/colors/search_result_color = Color(0.3, 0.3, 0.3, 1)
 TextEdit/colors/selection_color = Color(0.5, 0.5, 0.5, 1)
 TextEdit/colors/word_highlighted_color = Color(0.5, 0.5, 0.5, 0.25)
+TextEdit/fonts/font = ExtResource("1_mimdh")
 TextEdit/styles/focus = null
 TextEdit/styles/normal = SubResource("StyleBoxFlat_j7sg8")

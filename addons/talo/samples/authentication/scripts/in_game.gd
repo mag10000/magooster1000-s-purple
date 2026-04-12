@@ -21,8 +21,8 @@ func _ready() -> void:
 	)
 
 func _on_player_identified(player: TaloPlayer) -> void:
-	username.text = "What would you like to do,\n%s?" % Talo.current_alias.identifier
-	account.usrn = username.text
+	%Usernameacutual.text = "[b]" + Talo.current_alias.identifier + "?"
+	account.usrn = Talo.current_alias.identifier
 	account.logged_in = true
 	
 	var options := Talo.channels.GetChannelsOptions.new()
@@ -37,6 +37,14 @@ func _on_player_identified(player: TaloPlayer) -> void:
 	
 	if not has_personal_channel:
 		create_channel(Talo.current_alias.identifier + Talo.current_player.id)
+	
+	var saves = await Talo.saves.get_saves()
+	for save in saves:
+		if save.name == "settings":
+			account.settings = save.content
+			account.settings_loaded = true
+	$UI/MarginContainer/VBoxContainer/Home.disabled = false
+	await get_tree().create_timer(3).timeout
 
 
 

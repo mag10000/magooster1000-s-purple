@@ -18,6 +18,7 @@ boot_splash/stretch_mode=3
 boot_splash/image="uid://bqhy6lf0krms2"
 config/icon="uid://2qqerm1okbdh"
 boot_splash/minimum_display_time=8
+config/locale="es"
 
 [autoload]
 
@@ -31,21 +32,30 @@ Console="*uid://pxau0xoa5dnp"
 [display]
 
 window/size/borderless=true
+window/size/window_width_override=1152
+window/size/window_height_override=648
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/omnemoji/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
 
 [gdss]
 
 internal/initialized=true
 editor/use_minimap=true
 
-[gui]
+[internationalization]
 
-theme/custom_font="res://addons/omnemoji/resources/OmnEmojiMerged.tres"
+locale/translations=["res://data/localization/translation_sheet/purple_translation_sheet_translation.en.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.es.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.ja.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.ko.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.zh_Hans.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.zh_Hant.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.fr.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.hi.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.pt_BR.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.de.translation"]
+
+[localization_with_google_sheet]
+
+workspaces=[{
+"name": "translation sheet",
+"url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwtq9WGSywGpoObTIbb_s7aeR5hbsHYGoiQl_RH5CxZfnjLJDBIu5sKiFtDyauNTswmaYO-FGGcjCf/pub?output=csv"
+}]
 
 [omnemoji]
 
