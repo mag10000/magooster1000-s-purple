@@ -44,6 +44,11 @@ func _on_player_identified(player: TaloPlayer) -> void:
 			account.settings = save.content
 			account.settings_loaded = true
 	$UI/MarginContainer/VBoxContainer/Home.disabled = false
+	$UI/MarginContainer/VBoxContainer/ChangePassword.disabled = false
+	$UI/MarginContainer/VBoxContainer/ChangeEmail.disabled = false
+	$UI/MarginContainer/VBoxContainer/ChangeIdentifier.disabled = false
+	$UI/MarginContainer/VBoxContainer/Logout.disabled = false
+	$UI/MarginContainer/VBoxContainer/Delete.disabled = false
 	await get_tree().create_timer(3).timeout
 
 

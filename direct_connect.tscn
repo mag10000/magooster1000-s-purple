@@ -76,7 +76,7 @@ metadata/_edit_use_anchors_ = true
 [node name="title" type="RichTextLabel" parent="." unique_id=678727529]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.26649305
+anchor_left = 0.29166666
 anchor_top = 0.055555556
 anchor_right = 0.9609375
 anchor_bottom = 0.19135803
@@ -90,7 +90,7 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="DirectConnect" type="Sprite2D" parent="." unique_id=936849754]
-position = Vector2(871, 81)
+position = Vector2(288.0001, 81.00001)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_u78n7")
 

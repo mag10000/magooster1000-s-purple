@@ -15,3 +15,7 @@ func _on_settings_button_pressed():
 	if account.logged_in:
 		$Layout/Contents/settings.visible = !$Layout/Contents/settings.visible
 		$Layout/Contents/settings.freeze_loading = !$Layout/Contents/settings.freeze_loading
+
+
+func _on_button_pressed():
+	OS.shell_open("https://github.com/mag10000/magooster1000-s-purple/issues/new")

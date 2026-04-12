@@ -4,7 +4,7 @@ var channel_id
 var usrn = ""
 var logged_in = false
 var purple_version = "1.0.0"
-var version_label = "dev"
+var version_label = "beta"
 var theme = "base theme"
 var settings_loaded = false
 var settings = {}

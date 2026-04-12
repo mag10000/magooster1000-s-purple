@@ -74,7 +74,7 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="MultipleUsersSilhouette" type="Sprite2D" parent="." unique_id=803710918]
-position = Vector2(833, 82)
+position = Vector2(283, 82)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("3_kuxn5")
 

@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dswe67ryn0j81" path="res://settings.gd" id="10_fc6ls"]
 [ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://theme.gd" id="11_0oce6"]
 [ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_o2qoy"]
+[ext_resource type="Texture2D" uid="uid://cjs6d38th571v" path="res://Pictogrammers-Material-Bug-outline.512.png" id="13_6y3r0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyee0"]
 bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
@@ -229,6 +230,12 @@ layout_mode = 2
 layout_mode = 2
 text = "Magooster1000's purple v 1.0.0 - dev - base theme"
 
+[node name="Button" type="Button" parent="Layout/StatusBar/HBoxContainer" unique_id=1779695822]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+theme_override_icons/icon = ExtResource("13_6y3r0")
+text = "Report Bug"
+
 [node name="account" type="Label" parent="Layout/StatusBar/HBoxContainer" unique_id=1444591766]
 layout_mode = 2
 size_flags_horizontal = 10
@@ -287,6 +294,7 @@ mouse_default_cursor_shape = 12
 [connection signal="pressed" from="Layout/TopBar/HBox/MaxmizeButton" to="Layout/TopBar" method="_on_maxmize_button_pressed"]
 [connection signal="pressed" from="Layout/TopBar/HBox/CloseButton" to="Layout/TopBar" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Layout/Contents/settings/Panel/VBoxContainer/Button" to="Layout/Contents/settings" method="_on_button_pressed"]
+[connection signal="pressed" from="Layout/StatusBar/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="gui_input" from="Handles/Right" to="Handles" method="_on_right_gui_input"]
 [connection signal="gui_input" from="Handles/Bottom" to="Handles" method="_on_bottom_gui_input"]
 [connection signal="gui_input" from="Handles/Corner" to="Handles" method="_on_corner_gui_input"]
