@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cavfnkf2pr4fh" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dqss6smw7w8nh" path="res://addons/discord_gd/discord.gd" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://chhmldf3w3jsc" path="res://addons/onscreenkeyboard/onscreen_keyboard.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://yhfj65w6jyor" path="res://direct_connect.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c4vdaavl8vyor" path="res://friends.tscn" id="5_kek77"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="5_lquwl"]
@@ -23,19 +22,6 @@ script = ExtResource("1_0xm2m")
 [node name="DiscordBot" type="Node" parent="." unique_id=942593038]
 script = ExtResource("2_h2yge")
 metadata/_custom_type_script = "uid://dqss6smw7w8nh"
-
-[node name="OnscreenKeyboard" type="PanelContainer" parent="." unique_id=851869668]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -216.5
-offset_right = 216.5
-offset_bottom = 144.0
-grow_horizontal = 2
-script = ExtResource("3_h2yge")
-metadata/_custom_type_script = "uid://chhmldf3w3jsc"
 
 [node name="Direct Connect" parent="." unique_id=286805349 instance=ExtResource("4_1bvp3")]
 layout_mode = 1
@@ -63,7 +49,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.19598766
 anchor_right = 1.0
-anchor_bottom = 0.95987654
+anchor_bottom = 0.9212963
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true

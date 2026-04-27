@@ -3,12 +3,16 @@ extends Node
 var channel_id
 var usrn = ""
 var logged_in = false
-var purple_version = "1.0.0"
-var version_label = "beta"
+var purple_version = "1.1.0"
+var version_label = "dev"
 var theme = "base theme"
 var settings_loaded = false
 var settings = {}
 var theme_data = {"name" : "base theme","base" : true}
+var format_mode = "markdown"
+var dark_or_light = "dark"
+var light_bg = "4b4062"
+var dark_bg = "1a1525"
 
 func _ready():
 	var window_bar = preload("res://main_window.tscn")

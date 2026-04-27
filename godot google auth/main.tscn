@@ -10,41 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://mp_text.png" id="6_rywpj"]
 [ext_resource type="PackedScene" uid="uid://dif2sold0sni2" path="res://main_window.tscn" id="9_1dpcv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
-content_margin_left = 15.0
-content_margin_top = 15.0
-content_margin_right = 15.0
-content_margin_bottom = 15.0
-bg_color = Color(0.101961, 0.101961, 0.101961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
-content_margin_left = 15.0
-content_margin_top = 10.0
-content_margin_right = 15.0
-content_margin_bottom = 10.0
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-corner_detail = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
-content_margin_left = 15.0
-content_margin_top = 10.0
-content_margin_right = 15.0
-content_margin_bottom = 10.0
-bg_color = Color(0.122252, 0.122252, 0.122252, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-corner_detail = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dpcv"]
+bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5180901, 0.31678355, 0.71240336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Main" type="Control" unique_id=1561955900]
 layout_mode = 3
@@ -142,7 +118,8 @@ offset_right = -195.0
 offset_bottom = -509.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+theme = ExtResource("2_xpbok")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1dpcv")
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SignedInPanel" unique_id=211811533]
@@ -203,11 +180,6 @@ alignment = 1
 [node name="SignOutButton" type="Button" parent="SignedInPanel/VBoxContainer/SignoutButtonContainer" unique_id=241501047]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lquwl")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7mycd")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_lquwl")
-theme_override_styles/focus = SubResource("StyleBoxFlat_lquwl")
 text = "Sign Out"
 
 [node name="avatarrequest" type="HTTPRequest" parent="." unique_id=353503271]

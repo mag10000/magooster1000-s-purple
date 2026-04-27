@@ -23,3 +23,11 @@ func _on_submit_pressed() -> void:
 	else:
 		account.usrn = username
 		account.logged_in = true
+
+func _process(delta):
+	if account.dark_or_light == "dark":
+		$UI/Background.color = account.dark_bg
+		$UI/MarginContainer.theme = load("res://main theme.tres")
+	else:
+		$UI/Background.color = account.light_bg
+		$UI/MarginContainer.theme = load("res://main theme light.tres")

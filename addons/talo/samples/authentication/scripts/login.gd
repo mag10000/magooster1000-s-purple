@@ -42,3 +42,10 @@ func _on_register_pressed() -> void:
 
 func _process(delta):
 	%Verify.username = username.text
+	
+	if account.dark_or_light == "dark":
+		$UI/Background.color = account.dark_bg
+		$UI/MarginContainer.theme = load("res://main theme.tres")
+	else:
+		$UI/Background.color = account.light_bg
+		$UI/MarginContainer.theme = load("res://main theme light.tres")

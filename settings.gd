@@ -3,12 +3,12 @@ extends Control
 var freeze_loading = false
 
 func _on_button_pressed():
-	Talo.saves.create_save("settings",{"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"language" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected})
+	Talo.saves.create_save("settings",{"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"language" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected ,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed})
 	if not $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed:
 		$"../../StatusBar".hide()
 	else:
 		$"../../StatusBar".show()
-	account.settings = {"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"laungage" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected}
+	account.settings = {"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"laungage" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed}
 	freeze_loading = false
 	hide()
 
@@ -29,3 +29,12 @@ func _process(_delta):
 		if settings.has("language"):
 			$Panel/VBoxContainer/laungage/LanguageOptionButton.selected = settings.language
 			$Panel/VBoxContainer/laungage/LanguageOptionButton._on_language_selected(settings.language)
+		if settings.has("format_mode"):
+			$"Panel/VBoxContainer/format mode/OptionButton".selected = settings.format_mode
+			account.format_mode = $"Panel/VBoxContainer/format mode/OptionButton".get_item_text(settings.format_mode)
+		if settings.has("dark_or_light"):
+			$Panel/VBoxContainer/CheckButtonMode.button_pressed = settings.dark_or_light
+			if settings.dark_or_light == true:
+				account.dark_or_light = "dark"
+			else:
+				account.dark_or_light = "light"

@@ -88,3 +88,13 @@ func _on_line_edit_text_submitted(new_text):
 	Talo.channels.send_message(id,$LineEdit.text)
 	Talo.leaderboards.add_entry("message_storage",int(Time.get_datetime_string_from_system()),{"message": "[b]%s:[/b] %s" % [Talo.current_alias.identifier, $LineEdit.text],"channel" : id})
 	$LineEdit.text = ""
+
+func _process(delta):
+	if account.dark_or_light == "dark":
+		$ColorRect.color = account.dark_bg
+		$LineEdit.theme = load("res://main theme.tres")
+		$RichTextLabel.theme = load("res://main theme.tres")
+	else:
+		$ColorRect.color = account.light_bg
+		$LineEdit.theme = load("res://main theme light.tres")
+		$RichTextLabel.theme = load("res://main theme light.tres")

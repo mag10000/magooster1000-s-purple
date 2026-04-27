@@ -29,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_582st")
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
@@ -42,7 +43,6 @@ theme_override_constants/separation = 24
 [node name="Title" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=1793569556]
 layout_mode = 2
 size_flags_vertical = 0
-theme = ExtResource("2_582st")
 text = "Register"
 horizontal_alignment = 1
 
@@ -51,7 +51,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 placeholder_text = "Username"
 
 [node name="Password" type="TextEdit" parent="UI/MarginContainer/VBoxContainer" unique_id=1143039198]
@@ -59,7 +58,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 placeholder_text = "Password"
 
 [node name="EnableVerification" type="CheckBox" parent="UI/MarginContainer/VBoxContainer" unique_id=1920102774]
@@ -68,7 +66,6 @@ visible = false
 custom_minimum_size = Vector2(400, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 text = "Enable email verification"
 
 [node name="Email" type="TextEdit" parent="UI/MarginContainer/VBoxContainer" unique_id=1973685906]
@@ -76,21 +73,18 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 placeholder_text = "Email address"
 
 [node name="Submit" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1914260204]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 text = "Submit"
 
 [node name="Login" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1427057901]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 text = "Go to Login"
 
 [node name="ValidationLabel" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=1949252082]
@@ -98,7 +92,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_582st")
 
 [connection signal="button_down" from="UI/MarginContainer/VBoxContainer/Submit" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Login" to="." method="_on_login_pressed"]

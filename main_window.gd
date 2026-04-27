@@ -19,3 +19,14 @@ func _on_settings_button_pressed():
 
 func _on_button_pressed():
 	OS.shell_open("https://github.com/mag10000/magooster1000-s-purple/issues/new")
+
+
+func _on_close_button_pressed():
+	$Layout/Contents/settings.visible = false
+	$Layout/Contents/settings.freeze_loading = false
+
+func _process(delta):
+	if account.dark_or_light == "dark":
+		$Layout/Contents/settings/Panel.theme = load("res://main theme.tres")
+	else:
+		$Layout/Contents/settings/Panel.theme = load("res://main theme light.tres")

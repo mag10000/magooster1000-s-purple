@@ -39,7 +39,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
 
 [gdss]
 

@@ -82,3 +82,11 @@ func _on_delete_pressed() -> void:
 
 func _on_home_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
+
+func _process(delta):
+	if account.dark_or_light == "dark":
+		$UI/Background.color = account.dark_bg
+		$UI/MarginContainer.theme = load("res://main theme.tres")
+	else:
+		$UI/Background.color = account.light_bg
+		$UI/MarginContainer.theme = load("res://main theme light.tres")

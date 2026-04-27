@@ -14,6 +14,10 @@
 [ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://theme.gd" id="11_0oce6"]
 [ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_o2qoy"]
 [ext_resource type="Texture2D" uid="uid://cjs6d38th571v" path="res://Pictogrammers-Material-Bug-outline.512.png" id="13_6y3r0"]
+[ext_resource type="Script" uid="uid://bckbt8pqfnl1k" path="res://format_mode.gd" id="13_t05ru"]
+[ext_resource type="Texture2D" uid="uid://d23fxmykkx6j8" path="res://Github-Octicons-Markdown-16.512.png" id="14_aiaes"]
+[ext_resource type="Texture2D" uid="uid://sprcjkx8prwx" path="res://Colebemis-Feather-Moon.512.png" id="15_aiaes"]
+[ext_resource type="Script" uid="uid://b568ykk3iwkl3" path="res://check_button_mode.gd" id="16_t05ru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyee0"]
 bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
@@ -184,7 +188,6 @@ script = ExtResource("11_0oce6")
 custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_tyee0")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fc6ls")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_fc6ls")
 text = "Theme: Main Theme"
@@ -204,9 +207,48 @@ text = "language:"
 [node name="LanguageOptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=1810786834]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_tyee0")
 script = ExtResource("12_o2qoy")
 metadata/_custom_type_script = "uid://clmda7v77agc4"
+
+[node name="CheckButton" type="CheckButton" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=2098692947]
+layout_mode = 2
+text = "Use Formatting"
+
+[node name="format mode" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1247082146]
+layout_mode = 2
+script = ExtResource("13_t05ru")
+
+[node name="Label" type="Label" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=893491424]
+layout_mode = 2
+text = "Formatting Mode:"
+
+[node name="TextureRect" type="TextureRect" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=196039522]
+custom_minimum_size = Vector2(26, 24)
+layout_mode = 2
+texture = ExtResource("14_aiaes")
+expand_mode = 1
+
+[node name="OptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=1907087464]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+expand_icon = true
+selected = 1
+item_count = 2
+popup/item_0/text = "BBcode"
+popup/item_0/id = 0
+popup/item_1/text = "markdown"
+popup/item_1/id = 1
+
+[node name="CheckButtonMode" type="CheckButton" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=746044545]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Dark Mode"
+icon = ExtResource("15_aiaes")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("16_t05ru")
 
 [node name="HSeparator" type="HSeparator" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1627232632]
 layout_mode = 2
@@ -216,6 +258,18 @@ theme_override_styles/separator = SubResource("StyleBoxLine_1rr46")
 [node name="Button" type="Button" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=726928350]
 layout_mode = 2
 text = "Save"
+
+[node name="CloseButton" type="Button" parent="Layout/Contents/settings" unique_id=713918940]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 38.0
+grow_horizontal = 0
+theme = ExtResource("1_tyee0")
+text = "X"
 
 [node name="StatusBar" type="PanelContainer" parent="Layout" unique_id=668949428]
 custom_minimum_size = Vector2(0, 18)
@@ -294,6 +348,7 @@ mouse_default_cursor_shape = 12
 [connection signal="pressed" from="Layout/TopBar/HBox/MaxmizeButton" to="Layout/TopBar" method="_on_maxmize_button_pressed"]
 [connection signal="pressed" from="Layout/TopBar/HBox/CloseButton" to="Layout/TopBar" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Layout/Contents/settings/Panel/VBoxContainer/Button" to="Layout/Contents/settings" method="_on_button_pressed"]
+[connection signal="pressed" from="Layout/Contents/settings/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="Layout/StatusBar/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="gui_input" from="Handles/Right" to="Handles" method="_on_right_gui_input"]
 [connection signal="gui_input" from="Handles/Bottom" to="Handles" method="_on_bottom_gui_input"]

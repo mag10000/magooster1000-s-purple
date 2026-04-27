@@ -29,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_51dqc")
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
@@ -42,7 +43,6 @@ theme_override_constants/separation = 24
 [node name="Title" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=583982607]
 layout_mode = 2
 size_flags_vertical = 0
-theme = ExtResource("2_51dqc")
 text = "Change email"
 horizontal_alignment = 1
 
@@ -51,7 +51,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_51dqc")
 placeholder_text = "Current password"
 
 [node name="NewEmail" type="TextEdit" parent="UI/MarginContainer/VBoxContainer" unique_id=1874415675]
@@ -59,21 +58,18 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_51dqc")
 placeholder_text = "New email"
 
 [node name="Submit" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=636301946]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_51dqc")
 text = "Submit"
 
 [node name="Cancel" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1447593585]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_51dqc")
 text = "Cancel"
 
 [node name="ValidationLabel" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=336919666]

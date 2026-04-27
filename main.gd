@@ -67,3 +67,9 @@ func _on_direct_pressed():
 func _on_friends_pressed():
 	$"Direct Connect".hide()
 	$Friends.show()
+
+func _process(delta):
+	if account.dark_or_light == "dark":
+		$Panel.theme = load("res://main theme.tres")
+	else:
+		$Panel.theme = load("res://main theme light.tres")

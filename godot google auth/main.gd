@@ -221,3 +221,16 @@ func _process(delta):
 		$MpText2.show()
 	else:
 		$MpText2.hide()
+	
+	if account.dark_or_light == "dark":
+		$BG.color = account.dark_bg
+		$LoginPanel.theme = load("res://main theme.tres")
+		$LoginPanelDiscord.theme = load("res://main theme.tres")
+		$LoginPanelEmail.theme = load("res://main theme.tres")
+		$SignedInPanel.theme = load("res://main theme.tres")
+	else:
+		$BG.color = account.light_bg
+		$LoginPanel.theme = load("res://main theme light.tres")
+		$LoginPanelDiscord.theme = load("res://main theme light.tres")
+		$LoginPanelEmail.theme = load("res://main theme light.tres")
+		$SignedInPanel.theme = load("res://main theme light.tres")

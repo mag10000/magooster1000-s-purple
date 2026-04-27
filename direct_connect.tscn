@@ -2,7 +2,39 @@
 
 [ext_resource type="Script" uid="uid://wcgoddoddiqt" path="res://direct_connect.gd" id="1_ftegl"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_8ed1a"]
+[ext_resource type="Script" uid="uid://c2uej1h55sbf0" path="res://rich_text_label.gd" id="3_1l5k5"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="3_2kp0e"]
 [ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://direct_connect.png" id="3_u78n7"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="4_1l5k5"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="5_5exvb"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="6_ocylk"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="7_xk0kq"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="8_gchx4"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="9_gnw4j"]
+
+[sub_resource type="Resource" id="Resource_swdu2"]
+resource_local_to_scene = true
+script = ExtResource("4_1l5k5")
+
+[sub_resource type="Resource" id="Resource_rq66q"]
+resource_local_to_scene = true
+script = ExtResource("5_5exvb")
+
+[sub_resource type="Resource" id="Resource_mvudr"]
+resource_local_to_scene = true
+script = ExtResource("6_ocylk")
+
+[sub_resource type="Resource" id="Resource_7dtf0"]
+resource_local_to_scene = true
+script = ExtResource("7_xk0kq")
+
+[sub_resource type="Resource" id="Resource_jca51"]
+resource_local_to_scene = true
+script = ExtResource("8_gchx4")
+
+[sub_resource type="Resource" id="Resource_c3ko4"]
+resource_local_to_scene = true
+script = ExtResource("9_gnw4j")
 
 [node name="Direct Connect" type="Control" unique_id=286805349]
 layout_mode = 3
@@ -35,7 +67,30 @@ theme = ExtResource("2_8ed1a")
 bbcode_enabled = true
 text = "[b]TEST:[/b] Test Message"
 scroll_following = true
+script = ExtResource("3_1l5k5")
 metadata/_edit_use_anchors_ = true
+
+[node name="MarkdownLabel" type="RichTextLabel" parent="RichTextLabel" unique_id=2120635213]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+script = ExtResource("3_2kp0e")
+markdown_text = "# Hi
+## Hi
+**hi**
+_hi_"
+h1 = SubResource("Resource_swdu2")
+h2 = SubResource("Resource_rq66q")
+h3 = SubResource("Resource_mvudr")
+h4 = SubResource("Resource_7dtf0")
+h5 = SubResource("Resource_jca51")
+h6 = SubResource("Resource_c3ko4")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="LineEdit" type="TextEdit" parent="." unique_id=1401606930]
 layout_mode = 1
@@ -53,7 +108,6 @@ layout_mode = 0
 anchor_left = 1.0397351
 anchor_right = 1.1368654
 anchor_bottom = 1.0
-theme = ExtResource("2_8ed1a")
 text = "send"
 metadata/_edit_use_anchors_ = true
 
@@ -68,7 +122,6 @@ offset_top = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_8ed1a")
 placeholder_text = "player username"
 caret_blink = true
 metadata/_edit_use_anchors_ = true

@@ -28,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_lhjko")
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
@@ -41,7 +42,6 @@ theme_override_constants/separation = 24
 [node name="Title" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=167974943]
 layout_mode = 2
 size_flags_vertical = 0
-theme = ExtResource("2_lhjko")
 text = "Login"
 horizontal_alignment = 1
 
@@ -50,7 +50,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 placeholder_text = "Username"
 
 [node name="Password" type="TextEdit" parent="UI/MarginContainer/VBoxContainer" unique_id=806533651]
@@ -58,28 +57,24 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 placeholder_text = "Password"
 
 [node name="Submit" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=1882631925]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 text = "Submit"
 
 [node name="ForgotPassword" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=638541930]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 text = "Forgot password"
 
 [node name="Register" type="Button" parent="UI/MarginContainer/VBoxContainer" unique_id=328032725]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 text = "Go to Register"
 
 [node name="ValidationLabel" type="Label" parent="UI/MarginContainer/VBoxContainer" unique_id=659368251]
@@ -87,7 +82,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_lhjko")
 
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Submit" to="." method="_on_submit_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/ForgotPassword" to="." method="_on_forgot_password_pressed"]
