@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="purple"
+config/name="Magooster1000's Purple"
 run/main_scene="uid://0xklxw3hgltm"
+config/custom_user_dir_name="magooster1000's purple"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.101960786, 0.08235294, 0.14509805, 1)
 boot_splash/stretch_mode=3
@@ -28,6 +29,7 @@ Saver="*uid://bog3saou5uity"
 SupabaseAuth="*uid://c7gpms5gn3o73"
 account="*uid://i8tujkd2hcjk"
 Console="*uid://pxau0xoa5dnp"
+Cursor="*uid://djwpw33d4d8u7"
 
 [display]
 
@@ -39,7 +41,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/SystemTrayEnabler/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
 
 [gdss]
 
