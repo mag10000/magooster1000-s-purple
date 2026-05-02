@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://dif2sold0sni2"]
 
-[ext_resource type="Script" uid="uid://cka4w77qu2fn3" path="res://scripts/main_window.gd" id="1_1rr46"]
-[ext_resource type="Script" uid="uid://dhlpxvg34bcxf" path="res://scripts/handles.gd" id="1_n7l54"]
-[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_tyee0"]
-[ext_resource type="Script" uid="uid://ce8aic01h370y" path="res://scripts/top_bar.gd" id="2_5y2nw"]
-[ext_resource type="Texture2D" uid="uid://eu2pkhh8t87o" path="res://art/Picol-Picol-Settings.512.png" id="2_eqarp"]
-[ext_resource type="Script" uid="uid://csjjld44xxaat" path="res://scripts/window_title.gd" id="2_sq7ho"]
-[ext_resource type="Texture2D" uid="uid://b4pspnmr3naer" path="res://art/Pictogrammers-Material-Account.512.png" id="3_5y2nw"]
-[ext_resource type="Texture2D" uid="uid://vm8kqc3q4r0n" path="res://art/Pictogrammers-Material-Window-minimize.512.png" id="4_1rr46"]
-[ext_resource type="Texture2D" uid="uid://b3t64hw51rm2f" path="res://art/Pictogrammers-Material-Window-maximize.512.png" id="5_fc6ls"]
-[ext_resource type="Texture2D" uid="uid://d0ycrl2tlgmog" path="res://art/Pictogrammers-Material-Window-close.512.png" id="6_0oce6"]
-[ext_resource type="Script" uid="uid://dswe67ryn0j81" path="res://scripts/settings.gd" id="10_fc6ls"]
-[ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://scripts/theme.gd" id="11_0oce6"]
-[ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_o2qoy"]
-[ext_resource type="Texture2D" uid="uid://cjs6d38th571v" path="res://art/Pictogrammers-Material-Bug-outline.512.png" id="13_6y3r0"]
-[ext_resource type="Script" uid="uid://bckbt8pqfnl1k" path="res://scripts/format_mode.gd" id="13_t05ru"]
-[ext_resource type="Texture2D" uid="uid://d23fxmykkx6j8" path="res://art/Github-Octicons-Markdown-16.512.png" id="14_aiaes"]
-[ext_resource type="Texture2D" uid="uid://sprcjkx8prwx" path="res://art/Colebemis-Feather-Moon.512.png" id="15_aiaes"]
-[ext_resource type="Script" uid="uid://b568ykk3iwkl3" path="res://scripts/check_button_mode.gd" id="16_t05ru"]
+[ext_resource type="Script" uid="uid://cka4w77qu2fn3" path="res://scripts/main_window.gd" id="1_bygnt"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_e1lce"]
+[ext_resource type="Script" uid="uid://ce8aic01h370y" path="res://scripts/top_bar.gd" id="3_6bwi7"]
+[ext_resource type="Texture2D" uid="uid://eu2pkhh8t87o" path="res://art/Picol-Picol-Settings.512.png" id="4_xwo0r"]
+[ext_resource type="Texture2D" uid="uid://b4pspnmr3naer" path="res://art/Pictogrammers-Material-Account.512.png" id="5_bw38n"]
+[ext_resource type="Texture2D" uid="uid://vm8kqc3q4r0n" path="res://art/Pictogrammers-Material-Window-minimize.512.png" id="6_x6hcy"]
+[ext_resource type="Texture2D" uid="uid://b3t64hw51rm2f" path="res://art/Pictogrammers-Material-Window-maximize.512.png" id="7_bfn26"]
+[ext_resource type="Texture2D" uid="uid://d0ycrl2tlgmog" path="res://art/Pictogrammers-Material-Window-close.512.png" id="8_dpy0e"]
+[ext_resource type="Script" uid="uid://csjjld44xxaat" path="res://scripts/window_title.gd" id="9_n4um3"]
+[ext_resource type="Script" uid="uid://dswe67ryn0j81" path="res://scripts/settings.gd" id="10_3js5g"]
+[ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://scripts/theme.gd" id="11_pvrrg"]
+[ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_joqp0"]
+[ext_resource type="Script" uid="uid://bckbt8pqfnl1k" path="res://scripts/format_mode.gd" id="13_a462w"]
+[ext_resource type="Texture2D" uid="uid://d23fxmykkx6j8" path="res://art/Github-Octicons-Markdown-16.512.png" id="14_nrwni"]
+[ext_resource type="Texture2D" uid="uid://sprcjkx8prwx" path="res://art/Colebemis-Feather-Moon.512.png" id="15_dq3np"]
+[ext_resource type="Script" uid="uid://b568ykk3iwkl3" path="res://scripts/check_button_mode.gd" id="16_dt7w6"]
+[ext_resource type="Texture2D" uid="uid://cjs6d38th571v" path="res://art/Pictogrammers-Material-Bug-outline.512.png" id="17_vl3tt"]
+[ext_resource type="Script" uid="uid://dhlpxvg34bcxf" path="res://scripts/handles.gd" id="18_ihcn8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyee0"]
 bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
@@ -67,7 +67,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1rr46")
+script = ExtResource("1_bygnt")
 
 [node name="Layout" type="VBoxContainer" parent="." unique_id=1118369675]
 layout_mode = 1
@@ -81,9 +81,9 @@ mouse_filter = 2
 [node name="TopBar" type="PanelContainer" parent="Layout" unique_id=112189679]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
-theme = ExtResource("1_tyee0")
+theme = ExtResource("2_e1lce")
 theme_override_styles/panel = SubResource("StyleBoxFlat_tyee0")
-script = ExtResource("2_5y2nw")
+script = ExtResource("3_6bwi7")
 
 [node name="HBox" type="HBoxContainer" parent="Layout/TopBar" unique_id=1255328979]
 layout_mode = 2
@@ -93,14 +93,14 @@ theme_override_constants/separation = 8
 [node name="SettingsButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=2095647701]
 custom_minimum_size = Vector2(20, 18)
 layout_mode = 2
-texture_normal = ExtResource("2_eqarp")
+texture_normal = ExtResource("4_xwo0r")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="AccountButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1698349471]
 custom_minimum_size = Vector2(20, 18)
 layout_mode = 2
-texture_normal = ExtResource("3_5y2nw")
+texture_normal = ExtResource("5_bw38n")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -113,21 +113,21 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_sq7ho")
 [node name="MinimizeButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1726649779]
 custom_minimum_size = Vector2(20, 18)
 layout_mode = 2
-texture_normal = ExtResource("4_1rr46")
+texture_normal = ExtResource("6_x6hcy")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="MaxmizeButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=1108502701]
 custom_minimum_size = Vector2(20, 18)
 layout_mode = 2
-texture_normal = ExtResource("5_fc6ls")
+texture_normal = ExtResource("7_bfn26")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="CloseButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=695593794]
 custom_minimum_size = Vector2(20, 18)
 layout_mode = 2
-texture_normal = ExtResource("6_0oce6")
+texture_normal = ExtResource("8_dpy0e")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -135,7 +135,7 @@ stretch_mode = 5
 layout_mode = 2
 text = "Magooster1000's Purple"
 horizontal_alignment = 1
-script = ExtResource("2_sq7ho")
+script = ExtResource("9_n4um3")
 
 [node name="Contents" type="Control" parent="Layout" unique_id=2099078194]
 unique_name_in_owner = true
@@ -151,7 +151,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("10_fc6ls")
+script = ExtResource("10_3js5g")
 
 [node name="Panel" type="Panel" parent="Layout/Contents/settings" unique_id=1826715259]
 layout_mode = 1
@@ -160,7 +160,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_tyee0")
+theme = ExtResource("2_e1lce")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Layout/Contents/settings/Panel" unique_id=52984816]
 layout_mode = 1
@@ -182,7 +182,7 @@ icon_alignment = 1
 
 [node name="theme" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1421109434]
 layout_mode = 2
-script = ExtResource("11_0oce6")
+script = ExtResource("11_pvrrg")
 
 [node name="TextEditTheme" type="TextEdit" parent="Layout/Contents/settings/Panel/VBoxContainer/theme" unique_id=1787510269]
 custom_minimum_size = Vector2(50, 30)
@@ -207,7 +207,7 @@ text = "language:"
 [node name="LanguageOptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=1810786834]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("12_o2qoy")
+script = ExtResource("12_joqp0")
 metadata/_custom_type_script = "uid://clmda7v77agc4"
 
 [node name="FormatCheckButton" type="CheckButton" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=2098692947]
@@ -216,7 +216,7 @@ text = "Use Formatting"
 
 [node name="format mode" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1247082146]
 layout_mode = 2
-script = ExtResource("13_t05ru")
+script = ExtResource("13_a462w")
 
 [node name="Label" type="Label" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=893491424]
 layout_mode = 2
@@ -225,7 +225,7 @@ text = "Formatting Mode:"
 [node name="TextureRect" type="TextureRect" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=196039522]
 custom_minimum_size = Vector2(26, 24)
 layout_mode = 2
-texture = ExtResource("14_aiaes")
+texture = ExtResource("14_nrwni")
 expand_mode = 1
 
 [node name="OptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/format mode" unique_id=1907087464]
@@ -245,10 +245,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 button_pressed = true
 text = "Dark Mode"
-icon = ExtResource("15_aiaes")
+icon = ExtResource("15_dq3np")
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("16_t05ru")
+script = ExtResource("16_dt7w6")
 
 [node name="HSeparator" type="HSeparator" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=1627232632]
 layout_mode = 2
@@ -268,13 +268,13 @@ anchor_right = 1.0
 offset_left = -40.0
 offset_bottom = 38.0
 grow_horizontal = 0
-theme = ExtResource("1_tyee0")
+theme = ExtResource("2_e1lce")
 text = "X"
 
 [node name="StatusBar" type="PanelContainer" parent="Layout" unique_id=668949428]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
-theme = ExtResource("1_tyee0")
+theme = ExtResource("2_e1lce")
 theme_override_styles/panel = SubResource("StyleBoxFlat_sq7ho")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Layout/StatusBar" unique_id=450756839]
@@ -287,7 +287,7 @@ text = "Magooster1000's purple v 1.0.0 - dev - base theme"
 [node name="Button" type="Button" parent="Layout/StatusBar/HBoxContainer" unique_id=1779695822]
 layout_mode = 2
 theme_override_constants/icon_max_width = 25
-theme_override_icons/icon = ExtResource("13_6y3r0")
+theme_override_icons/icon = ExtResource("17_vl3tt")
 text = "Report Bug"
 
 [node name="account" type="Label" parent="Layout/StatusBar/HBoxContainer" unique_id=1444591766]
@@ -303,7 +303,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_n7l54")
+script = ExtResource("18_ihcn8")
 
 [node name="Right" type="Control" parent="Handles" unique_id=1287868427]
 custom_minimum_size = Vector2(5, 5)

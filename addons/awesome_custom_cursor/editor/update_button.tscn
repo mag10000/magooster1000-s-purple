@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1wjgq5pegmtw" path="res://addons/awesome_custom_cursor/editor/update_button.gd" id="1_cmy8f"]
 [ext_resource type="Script" uid="uid://iun5qnu0xnto" path="res://addons/awesome_custom_cursor/editor/DownloadUpdate.gd" id="2_ay5du"]
-[ext_resource type="Texture2D" uid="uid://b8j25xoi4awuc" path="res://icon.svg" id="3_vkf8e"]
+[ext_resource type="Texture2D" uid="uid://b8j25xoi4awuc" path="res://art/icon.svg" id="3_vkf8e"]
 
 [node name="UpdateButton" type="Button" unique_id=1660601113]
 visible = false
