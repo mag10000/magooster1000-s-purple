@@ -181,5 +181,6 @@ follow_viewport_enabled = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=462397325]
 sprite_frames = SubResource("SpriteFrames_it6wn")
-animation = &"arrow"
+animation = &"wait"
 autoplay = "arrow"
+frame_progress = 0.21377958
