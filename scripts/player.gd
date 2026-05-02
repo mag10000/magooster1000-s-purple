@@ -10,6 +10,7 @@ var settings_loaded = false
 var settings = {}
 var theme_data = {"name" : "base theme","base" : true}
 var format_mode = "markdown"
+var use_formatting = false
 var dark_or_light = "dark"
 var light_bg = "4b4062"
 var dark_bg = "1a1525"

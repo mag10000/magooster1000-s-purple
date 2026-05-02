@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dommctfgmfg8m"]
 
-[ext_resource type="Texture2D" uid="uid://2rhtpg25pwlr" path="res://nofeed.png" id="1_0xy08"]
-[ext_resource type="Script" uid="uid://m1b83lm6sf2f" path="res://cam_tex.gd" id="2_mtv21"]
+[ext_resource type="Texture2D" uid="uid://2rhtpg25pwlr" path="res://art/nofeed.png" id="1_0xy08"]
+[ext_resource type="Script" uid="uid://m1b83lm6sf2f" path="res://scripts/cam_tex.gd" id="2_mtv21"]
 
 [node name="camera input" type="Control" unique_id=739310132]
 layout_mode = 3

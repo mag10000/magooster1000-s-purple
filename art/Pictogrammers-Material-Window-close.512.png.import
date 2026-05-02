@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3t64hw51rm2f"
-path="res://.godot/imported/Pictogrammers-Material-Window-maximize.512.png-d45409c8edbe16f98fecd1b4ae884590.ctex"
+uid="uid://d0ycrl2tlgmog"
+path="res://.godot/imported/Pictogrammers-Material-Window-close.512.png-7cd456aa7fef2b7ccd7b108d8335ce23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictogrammers-Material-Window-maximize.512.png"
-dest_files=["res://.godot/imported/Pictogrammers-Material-Window-maximize.512.png-d45409c8edbe16f98fecd1b4ae884590.ctex"]
+source_file="res://art/Pictogrammers-Material-Window-close.512.png"
+dest_files=["res://.godot/imported/Pictogrammers-Material-Window-close.512.png-7cd456aa7fef2b7ccd7b108d8335ce23.ctex"]
 
 [params]
 

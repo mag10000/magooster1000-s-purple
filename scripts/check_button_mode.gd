@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	if button_pressed:
 		text = tr("Dark Mode")
-		icon = load("res://Colebemis-Feather-Moon.512.png")
+		icon = load("res://art/Colebemis-Feather-Moon.512.png")
 	else:
 		text = tr("Light Mode")
-		icon = load("res://Colebemis-Feather-Sun.512.png")
+		icon = load("res://art/Colebemis-Feather-Sun.512.png")

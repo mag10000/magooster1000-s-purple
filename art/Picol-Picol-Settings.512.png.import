@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4pspnmr3naer"
-path="res://.godot/imported/Pictogrammers-Material-Account.512.png-a6822241eeae63bb39042bfa2d1274f2.ctex"
+uid="uid://eu2pkhh8t87o"
+path="res://.godot/imported/Picol-Picol-Settings.512.png-6d5c1b998d435b1c893cfbbc7bb624b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictogrammers-Material-Account.512.png"
-dest_files=["res://.godot/imported/Pictogrammers-Material-Account.512.png-a6822241eeae63bb39042bfa2d1274f2.ctex"]
+source_file="res://art/Picol-Picol-Settings.512.png"
+dest_files=["res://.godot/imported/Picol-Picol-Settings.512.png-6d5c1b998d435b1c893cfbbc7bb624b5.ctex"]
 
 [params]
 

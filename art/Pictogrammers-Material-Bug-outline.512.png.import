@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjs6d38th571v"
-path="res://.godot/imported/Pictogrammers-Material-Bug-outline.512.png-8da7d4efca3f28e0109819003bec9185.ctex"
+path="res://.godot/imported/Pictogrammers-Material-Bug-outline.512.png-f417cfed85f5645c6d08b238eaa1c18f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictogrammers-Material-Bug-outline.512.png"
-dest_files=["res://.godot/imported/Pictogrammers-Material-Bug-outline.512.png-8da7d4efca3f28e0109819003bec9185.ctex"]
+source_file="res://art/Pictogrammers-Material-Bug-outline.512.png"
+dest_files=["res://.godot/imported/Pictogrammers-Material-Bug-outline.512.png-f417cfed85f5645c6d08b238eaa1c18f.ctex"]
 
 [params]
 

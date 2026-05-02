@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5xax6skmcj46"
-path="res://.godot/imported/direct_connect.png-8dad94e04b0eedddc6f2284b571f42b7.ctex"
+uid="uid://dr4y2ehw1ke55"
+path="res://.godot/imported/multiple-users-silhouette.png-aebb97ae1c4d0a48fb3fec8b2d4eb55f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://direct_connect.png"
-dest_files=["res://.godot/imported/direct_connect.png-8dad94e04b0eedddc6f2284b571f42b7.ctex"]
+source_file="res://art/multiple-users-silhouette.png"
+dest_files=["res://.godot/imported/multiple-users-silhouette.png-aebb97ae1c4d0a48fb3fec8b2d4eb55f.ctex"]
 
 [params]
 

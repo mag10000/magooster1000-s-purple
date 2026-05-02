@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0ycrl2tlgmog"
-path="res://.godot/imported/Pictogrammers-Material-Window-close.512.png-9f2f68e4a1d101e2ac9c2a6ff1dea4aa.ctex"
+uid="uid://j021pm0ev0qj"
+path="res://.godot/imported/Pictogrammers-Material-Code-brackets.512.png-b18c7fe5557531f0660f1c419030b7fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictogrammers-Material-Window-close.512.png"
-dest_files=["res://.godot/imported/Pictogrammers-Material-Window-close.512.png-9f2f68e4a1d101e2ac9c2a6ff1dea4aa.ctex"]
+source_file="res://art/Pictogrammers-Material-Code-brackets.512.png"
+dest_files=["res://.godot/imported/Pictogrammers-Material-Code-brackets.512.png-b18c7fe5557531f0660f1c419030b7fc.ctex"]
 
 [params]
 

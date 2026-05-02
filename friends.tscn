@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4vdaavl8vyor"]
 
-[ext_resource type="Script" uid="uid://cym5gjhty5kff" path="res://friends.gd" id="1_kuxn5"]
+[ext_resource type="Script" uid="uid://cym5gjhty5kff" path="res://scripts/friends.gd" id="1_kuxn5"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_kuxn5"]
-[ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://multiple-users-silhouette.png" id="3_kuxn5"]
+[ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://art/multiple-users-silhouette.png" id="3_kuxn5"]
 
 [node name="friends" type="Control" unique_id=286805349]
 layout_mode = 3

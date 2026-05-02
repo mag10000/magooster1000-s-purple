@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccpewsadgra5o"
-path="res://.godot/imported/Colebemis-Feather-Sun.512.png-3c916cdc806030a9e5435bc6c58792c5.ctex"
+uid="uid://b3t64hw51rm2f"
+path="res://.godot/imported/Pictogrammers-Material-Window-maximize.512.png-e0302b836cccf0eb8932be44b779313d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Colebemis-Feather-Sun.512.png"
-dest_files=["res://.godot/imported/Colebemis-Feather-Sun.512.png-3c916cdc806030a9e5435bc6c58792c5.ctex"]
+source_file="res://art/Pictogrammers-Material-Window-maximize.512.png"
+dest_files=["res://.godot/imported/Pictogrammers-Material-Window-maximize.512.png-e0302b836cccf0eb8932be44b779313d.ctex"]
 
 [params]
 

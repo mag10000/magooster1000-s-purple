@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr4y2ehw1ke55"
-path="res://.godot/imported/multiple-users-silhouette.png-d4cd499c65ae0be959a1df351d8c49e2.ctex"
+uid="uid://vm8kqc3q4r0n"
+path="res://.godot/imported/Pictogrammers-Material-Window-minimize.512.png-12dd7fee47c850a5570b4274a8a7bcc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://multiple-users-silhouette.png"
-dest_files=["res://.godot/imported/multiple-users-silhouette.png-d4cd499c65ae0be959a1df351d8c49e2.ctex"]
+source_file="res://art/Pictogrammers-Material-Window-minimize.512.png"
+dest_files=["res://.godot/imported/Pictogrammers-Material-Window-minimize.512.png-12dd7fee47c850a5570b4274a8a7bcc0.ctex"]
 
 [params]
 

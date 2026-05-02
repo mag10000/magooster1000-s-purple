@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://okf31l7oq38t"]
 
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_xw4yo"]
-[ext_resource type="Script" uid="uid://bci1grvb1xdvi" path="res://emoji_browser.gd" id="1_y2vaa"]
+[ext_resource type="Script" uid="uid://bci1grvb1xdvi" path="res://scripts/emoji_browser.gd" id="1_y2vaa"]
 
 [node name="emoji_browse" type="Panel" unique_id=1175257485]
 anchors_preset = 15

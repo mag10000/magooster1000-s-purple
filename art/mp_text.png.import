@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sprcjkx8prwx"
-path="res://.godot/imported/Colebemis-Feather-Moon.512.png-59cd6e8bd140e9d6d66a3d007c5247b0.ctex"
+uid="uid://bqhy6lf0krms2"
+path="res://.godot/imported/mp_text.png-bdc5a6619e40cd56deef084945c3ffd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Colebemis-Feather-Moon.512.png"
-dest_files=["res://.godot/imported/Colebemis-Feather-Moon.512.png-59cd6e8bd140e9d6d66a3d007c5247b0.ctex"]
+source_file="res://art/mp_text.png"
+dest_files=["res://.godot/imported/mp_text.png-bdc5a6619e40cd56deef084945c3ffd2.ctex"]
 
 [params]
 

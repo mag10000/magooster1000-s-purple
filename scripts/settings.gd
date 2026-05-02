@@ -3,12 +3,12 @@ extends Control
 var freeze_loading = false
 
 func _on_button_pressed():
-	Talo.saves.create_save("settings",{"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"language" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected ,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed})
+	Talo.saves.create_save("settings",{"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"language" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected ,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed,"use_formatting" : $Panel/VBoxContainer/FormatCheckButton.button_pressed})
 	if not $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed:
 		$"../../StatusBar".hide()
 	else:
 		$"../../StatusBar".show()
-	account.settings = {"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"laungage" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed}
+	account.settings = {"show_status_bar" : $Panel/VBoxContainer/CheckButtonStatusBar.button_pressed,"theme" : account.theme_data,"laungage" : $Panel/VBoxContainer/laungage/LanguageOptionButton.selected,"format_mode" : $"Panel/VBoxContainer/format mode/OptionButton".selected,"dark_or_light" : $Panel/VBoxContainer/CheckButtonMode.button_pressed,"use_formatting" : $Panel/VBoxContainer/FormatCheckButton.button_pressed}
 	freeze_loading = false
 	hide()
 
@@ -38,3 +38,6 @@ func _process(_delta):
 				account.dark_or_light = "dark"
 			else:
 				account.dark_or_light = "light"
+		if settings.has("use_formatting"):
+			$Panel/VBoxContainer/FormatCheckButton.button_pressed = settings.use_formatting
+			account.use_formatting = settings.use_formatting

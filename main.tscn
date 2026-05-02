@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://0xklxw3hgltm"]
 
-[ext_resource type="Script" uid="uid://cavfnkf2pr4fh" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cavfnkf2pr4fh" path="res://scripts/main.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dqss6smw7w8nh" path="res://addons/discord_gd/discord.gd" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://yhfj65w6jyor" path="res://direct_connect.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c4vdaavl8vyor" path="res://friends.tscn" id="5_kek77"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://mp_text.png" id="6_7mycd"]
-[ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://direct_connect.png" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://multiple-users-silhouette.png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://art/mp_text.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://art/direct_connect.png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://art/multiple-users-silhouette.png" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dif2sold0sni2" path="res://main_window.tscn" id="10_4c57u"]
 
 [node name="Main" type="Control" unique_id=2117586105]

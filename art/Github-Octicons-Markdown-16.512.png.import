@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2qqerm1okbdh"
-path="res://.godot/imported/purple_logo.png-8c77a60580463c127f65e576bd1a66fa.ctex"
+uid="uid://d23fxmykkx6j8"
+path="res://.godot/imported/Github-Octicons-Markdown-16.512.png-de2e9b2d4ef093e3870e54c80646eeed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://purple_logo.png"
-dest_files=["res://.godot/imported/purple_logo.png-8c77a60580463c127f65e576bd1a66fa.ctex"]
+source_file="res://art/Github-Octicons-Markdown-16.512.png"
+dest_files=["res://.godot/imported/Github-Octicons-Markdown-16.512.png-de2e9b2d4ef093e3870e54c80646eeed.ctex"]
 
 [params]
 
