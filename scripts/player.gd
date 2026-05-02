@@ -14,12 +14,11 @@ var use_formatting = false
 var dark_or_light = "dark"
 var light_bg = "4b4062"
 var dark_bg = "1a1525"
+var local_settings_loaded = false
 
 func _ready():
-	var window_bar = preload("res://main_window.tscn")
-	var instance = window_bar.instantiate()
-	add_child(instance)
 	get_window().title = "MP - magooster1000's purple"
+	load_local_saves()
 	Console._toogle_key = KEY_BACKSLASH
 	Console.enable_console = true
 	Console.print("Welcome to the console.")
@@ -55,3 +54,15 @@ func talo_load():
 		return new_json.get_data()
 	else:
 		print("could not find user_talo_email.dat")
+
+func local_save_settings(data : Dictionary):
+	var file = FileAccess.open("user://settings.dat", FileAccess.WRITE)
+	file.store_string(JSON.stringify(data))
+	file.close()
+
+func load_local_saves():
+	if FileAccess.file_exists("user://settings.dat"):
+		var text_data = FileAccess.get_file_as_string("user://settings.dat")
+		var json_data = JSON.parse_string(text_data)
+		settings = json_data
+		local_settings_loaded = true

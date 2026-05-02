@@ -81,7 +81,7 @@ func _on_delete_pressed() -> void:
 	go_to_delete.emit()
 
 func _on_home_pressed():
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _process(delta):
 	if account.dark_or_light == "dark":
