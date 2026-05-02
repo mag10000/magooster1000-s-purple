@@ -1,4 +1,5 @@
-# magooster1000's purple
+# Magooster1000's Purple 
+<img src="https://raw.githubusercontent.com/mag10000/magooster1000-s-purple/refs/heads/Mag-Branch/art/purple_logo.png" width="50" height="50" alt="The purple logo.">
 a new discord like chating platform.
 
 # Translations
