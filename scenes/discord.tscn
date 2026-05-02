@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c14wjq4gouthi"]
+
+[ext_resource type="Script" uid="uid://c2cfy2wf1pu0f" path="res://scripts/discord.gd" id="1_2dpvs"]
+[ext_resource type="Script" uid="uid://dqss6smw7w8nh" path="res://addons/discord_gd/discord.gd" id="2_r1bkr"]
+
+[node name="Discord" type="Control" unique_id=596949085]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2dpvs")
+
+[node name="DiscordBot" type="Node" parent="." unique_id=561348094]
+script = ExtResource("2_r1bkr")
+metadata/_custom_type_script = "uid://dqss6smw7w8nh"

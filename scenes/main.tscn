@@ -8,7 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://bqhy6lf0krms2" path="res://art/mp_text.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c5xax6skmcj46" path="res://art/direct_connect.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://art/multiple-users-silhouette.png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://d0emfp5h74viy" path="res://godot google auth/discord.png" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://dif2sold0sni2" path="res://scenes/main_window.tscn" id="10_4c57u"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ya4ey"]
+grow_begin = -2.0
+grow_end = -2.0
+thickness = 2
 
 [node name="Main" type="Control" unique_id=2117586105]
 layout_mode = 3
@@ -65,6 +71,17 @@ layout_mode = 2
 disabled = true
 text = "Friends"
 icon = ExtResource("8_5vw27")
+expand_icon = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1763569032]
+custom_minimum_size = Vector2(10, 25)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_ya4ey")
+
+[node name="Discord" type="Button" parent="Panel/VBoxContainer" unique_id=1148308732]
+layout_mode = 2
+text = "Discord"
+icon = ExtResource("9_choun")
 expand_icon = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1529666139]

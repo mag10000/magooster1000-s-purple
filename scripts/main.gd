@@ -8,14 +8,6 @@ func _ready():
 	if not account.logged_in:
 		get_tree().change_scene_to_file("res://godot google auth/main.tscn")
 	
-	var discord_bot = $DiscordBot
-	
-	discord_bot.TOKEN = token
-	discord_bot.login()
-	
-	discord_bot.connect("bot_ready",_on_bot_ready)
-	discord_bot.connect("message_create",_on_message_create)
-	
 	get_scores()
 
 func get_scores():

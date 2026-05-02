@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cka4w77qu2fn3" path="res://scripts/main_window.gd" id="1_bygnt"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_e1lce"]
 [ext_resource type="Script" uid="uid://ce8aic01h370y" path="res://scripts/top_bar.gd" id="3_6bwi7"]
+[ext_resource type="Texture2D" uid="uid://2qqerm1okbdh" path="res://art/purple_logo.png" id="4_e1lce"]
 [ext_resource type="Texture2D" uid="uid://eu2pkhh8t87o" path="res://art/Picol-Picol-Settings.512.png" id="4_xwo0r"]
 [ext_resource type="Texture2D" uid="uid://b4pspnmr3naer" path="res://art/Pictogrammers-Material-Account.512.png" id="5_bw38n"]
 [ext_resource type="Texture2D" uid="uid://vm8kqc3q4r0n" path="res://art/Pictogrammers-Material-Window-minimize.512.png" id="6_x6hcy"]
@@ -89,6 +90,11 @@ script = ExtResource("3_6bwi7")
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 8
+
+[node name="icon" type="TextureRect" parent="Layout/TopBar/HBox" unique_id=2098238428]
+layout_mode = 2
+texture = ExtResource("4_e1lce")
+expand_mode = 2
 
 [node name="SettingsButton" type="TextureButton" parent="Layout/TopBar/HBox" unique_id=2095647701]
 custom_minimum_size = Vector2(20, 18)
