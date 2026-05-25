@@ -1,3 +1,5 @@
+extends Node
+
 var stars := 0
 var spawn_level := "starting_zone"
 var spawn_point := Vector2.ZERO

@@ -8,13 +8,17 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="Magooster1000's Purple"
+config/name="Magooster1000s Purple"
 run/main_scene="uid://0xklxw3hgltm"
 config/custom_user_dir_name="magooster1000's purple"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-boot_splash/bg_color=Color(0.101960786, 0.08235294, 0.14509805, 1)
+boot_splash/bg_color=Color(0.101961, 0.0823529, 0.145098, 1)
 boot_splash/stretch_mode=3
 boot_splash/image="uid://bqhy6lf0krms2"
 config/icon="uid://2qqerm1okbdh"
@@ -42,7 +46,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/SystemTrayEnabler/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
 
 [gdss]
 
@@ -75,4 +79,4 @@ rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0.101960786, 0.08235294, 0.14509805, 1)
+environment/defaults/default_clear_color=Color(0.101961, 0.0823529, 0.145098, 1)
