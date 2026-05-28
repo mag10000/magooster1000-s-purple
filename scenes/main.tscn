@@ -68,7 +68,6 @@ expand_icon = true
 
 [node name="Friends" type="Button" parent="Panel/VBoxContainer" unique_id=1002110816]
 layout_mode = 2
-disabled = true
 text = "Friends"
 icon = ExtResource("8_5vw27")
 expand_icon = true

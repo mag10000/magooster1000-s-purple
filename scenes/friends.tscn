@@ -3,6 +3,41 @@
 [ext_resource type="Script" uid="uid://cym5gjhty5kff" path="res://scripts/friends.gd" id="1_kuxn5"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="2_kuxn5"]
 [ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://art/multiple-users-silhouette.png" id="3_kuxn5"]
+[ext_resource type="Texture2D" uid="uid://dkoau2iohakbe" path="res://art/cross.png" id="3_ombsv"]
+[ext_resource type="Script" uid="uid://e284dgyvyqe5" path="res://scenes/friends_panel.gd" id="3_s2fhl"]
+[ext_resource type="Texture2D" uid="uid://chcoigvqasltq" path="res://art/add-friend.png" id="4_vgxxm"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="6_4315i"]
+[ext_resource type="Script" uid="uid://c2uej1h55sbf0" path="res://scripts/rich_text_label.gd" id="6_rtvlr"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="7_rtvlr"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="8_4edun"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="9_lvvhv"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="10_hnlqg"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="11_dq4w0"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="12_uduus"]
+
+[sub_resource type="Resource" id="Resource_ubmla"]
+resource_local_to_scene = true
+script = ExtResource("7_rtvlr")
+
+[sub_resource type="Resource" id="Resource_pitbg"]
+resource_local_to_scene = true
+script = ExtResource("8_4edun")
+
+[sub_resource type="Resource" id="Resource_iqnnj"]
+resource_local_to_scene = true
+script = ExtResource("9_lvvhv")
+
+[sub_resource type="Resource" id="Resource_2g85s"]
+resource_local_to_scene = true
+script = ExtResource("10_hnlqg")
+
+[sub_resource type="Resource" id="Resource_2mgpp"]
+resource_local_to_scene = true
+script = ExtResource("11_dq4w0")
+
+[sub_resource type="Resource" id="Resource_tkb0v"]
+resource_local_to_scene = true
+script = ExtResource("12_uduus")
 
 [node name="friends" type="Control" unique_id=286805349]
 layout_mode = 3
@@ -22,10 +57,105 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.101960786, 0.08235294, 0.14509805, 1)
 
+[node name="FriendsPanel" type="Panel" parent="." unique_id=185686027]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 130.0
+offset_right = 391.0
+offset_bottom = 563.0
+theme = ExtResource("2_kuxn5")
+script = ExtResource("3_s2fhl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FriendsPanel" unique_id=1256484495]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FriendsLabel" type="RichTextLabel" parent="FriendsPanel/VBoxContainer" unique_id=705577814]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]Friends:"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="friends" type="ScrollContainer" parent="FriendsPanel/VBoxContainer" unique_id=1921927361]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FriendsPanel/VBoxContainer/friends" unique_id=571336305]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="FriendsPanel/VBoxContainer/friends/VBoxContainer" unique_id=1984361089]
+layout_mode = 2
+text = "MyFriend1"
+icon = ExtResource("3_ombsv")
+expand_icon = true
+
+[node name="PendingLabel" type="RichTextLabel" parent="FriendsPanel/VBoxContainer" unique_id=1395604917]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]Pending:"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="pending" type="ScrollContainer" parent="FriendsPanel/VBoxContainer" unique_id=1052510559]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FriendsPanel/VBoxContainer/pending" unique_id=432848713]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="FriendsPanel/VBoxContainer/pending/VBoxContainer" unique_id=1307727406]
+layout_mode = 2
+text = "MyFriend2"
+icon = ExtResource("3_ombsv")
+expand_icon = true
+
+[node name="RequestsLabel" type="RichTextLabel" parent="FriendsPanel/VBoxContainer" unique_id=191776706]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]Requests:"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="requests" type="ScrollContainer" parent="FriendsPanel/VBoxContainer" unique_id=269079474]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FriendsPanel/VBoxContainer/requests" unique_id=340970446]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="FriendsPanel/VBoxContainer/requests/VBoxContainer" unique_id=958795025]
+layout_mode = 2
+text = "MyFriend3"
+icon = ExtResource("3_ombsv")
+expand_icon = true
+
+[node name="add_friend" type="Button" parent="FriendsPanel/VBoxContainer" unique_id=1999679299]
+layout_mode = 2
+text = "add "
+icon = ExtResource("4_vgxxm")
+expand_icon = true
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=241759541]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2126736
+anchor_left = 0.34288195
 anchor_top = 0.20061728
 anchor_right = 1.0
 anchor_bottom = 0.86882716
@@ -35,7 +165,30 @@ theme = ExtResource("2_kuxn5")
 bbcode_enabled = true
 text = "[b]TEST:[/b] Test Message"
 scroll_following = true
+script = ExtResource("6_rtvlr")
 metadata/_edit_use_anchors_ = true
+
+[node name="MarkdownLabel" type="RichTextLabel" parent="RichTextLabel" unique_id=337396184]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+script = ExtResource("6_4315i")
+markdown_text = "# Hi
+## Hi
+**hi**
+_hi_"
+h1 = SubResource("Resource_ubmla")
+h2 = SubResource("Resource_pitbg")
+h3 = SubResource("Resource_iqnnj")
+h4 = SubResource("Resource_2g85s")
+h5 = SubResource("Resource_2mgpp")
+h6 = SubResource("Resource_tkb0v")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="LineEdit" type="TextEdit" parent="." unique_id=1401606930]
 layout_mode = 1
@@ -46,6 +199,7 @@ anchor_right = 0.9192708
 anchor_bottom = 0.9259259
 theme = ExtResource("2_kuxn5")
 placeholder_text = "message"
+emoji_menu_enabled = false
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="LineEdit" unique_id=728951514]
@@ -55,6 +209,17 @@ anchor_right = 1.0848708
 anchor_bottom = 1.0
 text = "send"
 metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="LineEdit" unique_id=1379289181]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "😃"
 
 [node name="title" type="RichTextLabel" parent="." unique_id=678727529]
 layout_mode = 1
@@ -77,4 +242,106 @@ position = Vector2(283, 82)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("3_kuxn5")
 
+[node name="attribution" type="RichTextLabel" parent="." unique_id=1634176973]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 602.0
+offset_right = 963.0
+offset_bottom = 618.0
+theme = ExtResource("2_kuxn5")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[url=https://www.flaticon.com/free-icons/close\" title=\"close icons]Close icons created by Ilham Fitrotul Hayat - Flaticon[/url] [url=https://www.flaticon.com/free-icons/tick] Tick icons created by Kiranshastry - Flaticon[/url] [url=https://www.flaticon.com/free-icons/add-friend]Add friend icons created by Freepik - Flaticon[/url] [url=https://icons8.com/icon/69352/view-more]Pending[/url] by [url=https://icons8.com]Icons8[/url]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="PopupGray" type="ColorRect" parent="." unique_id=1094367469]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16470589, 0.16470589, 0.16470589, 0.5019608)
+
+[node name="Panel" type="Panel" parent="PopupGray" unique_id=1065745462]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -263.0
+offset_top = -152.0
+offset_right = 263.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kuxn5")
+
+[node name="add friend" type="Control" parent="PopupGray/Panel" unique_id=643622487]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="RichTextLabel" parent="PopupGray/Panel/add friend" unique_id=345183186]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]Add Friend"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="friend_usrnm" type="TextEdit" parent="PopupGray/Panel/add friend" unique_id=125678398]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -17.5
+offset_right = 105.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Username"
+
+[node name="sendrequest" type="Button" parent="PopupGray/Panel/add friend" unique_id=1907896483]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Send Friend Request"
+
+[node name="close" type="Button" parent="PopupGray/Panel" unique_id=631145559]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_bottom = 38.0
+grow_horizontal = 0
+text = "X"
+
+[connection signal="pressed" from="FriendsPanel/VBoxContainer/add_friend" to="FriendsPanel" method="_on_add_friend_pressed"]
 [connection signal="pressed" from="LineEdit/Button" to="." method="_on_button_pressed"]
+[connection signal="meta_clicked" from="attribution" to="." method="_on_attribution_meta_clicked"]
+[connection signal="pressed" from="PopupGray/Panel/add friend/sendrequest" to="." method="_on_sendrequest_pressed"]
+[connection signal="pressed" from="PopupGray/Panel/close" to="." method="_on_close_pressed"]

@@ -1,9 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd3fjuridfsnl"]
+[gd_scene format=3 uid="uid://bd3fjuridfsnl"]
 
-[ext_resource type="Script" path="res://addons/ConsoleGD/scripts/console_scene.gd" id="1_ayjop"]
+[ext_resource type="Script" uid="uid://d2iyotaadoph" path="res://addons/ConsoleGD/scripts/console_scene.gd" id="1_ayjop"]
 [ext_resource type="Theme" uid="uid://dsetugfuuo23h" path="res://addons/ConsoleGD/console.theme" id="1_j2tue"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="3_ls17k"]
+[ext_resource type="Theme" uid="uid://bsux6ynsqfljm" path="res://console_theme.tres" id="3_qdnhl"]
 
-[node name="_Console_scene" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdnhl"]
+bg_color = Color(0.23301542, 0.2191475, 0.2896432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5180901, 0.31678355, 0.71240336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="_Console_scene" type="Control" unique_id=596962872]
 process_mode = 3
 y_sort_enabled = true
 layout_mode = 3
@@ -20,7 +34,7 @@ mouse_force_pass_scroll_events = false
 theme = ExtResource("1_j2tue")
 script = ExtResource("1_ayjop")
 
-[node name="WidgetsContainer" type="Control" parent="."]
+[node name="WidgetsContainer" type="Control" parent="." unique_id=2065598763]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -30,17 +44,19 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Window" type="Window" parent="."]
+[node name="Window" type="Window" parent="." unique_id=501490835]
 unique_name_in_owner = true
+oversampling_override = 1.0
 title = "WINDOW_CONSOLE_TITLE"
-position = Vector2i(0, 24)
+position = Vector2i(0, 36)
 size = Vector2i(800, 400)
 extend_to_title = true
 min_size = Vector2i(296, 200)
+theme = ExtResource("3_qdnhl")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="Panel" parent="Window"]
+[node name="Panel" type="Panel" parent="Window" unique_id=483445531]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -48,8 +64,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("3_ls17k")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Panel" unique_id=1417476946]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -63,7 +80,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextBox" type="RichTextLabel" parent="Window/Panel/VBoxContainer"]
+[node name="TextBox" type="RichTextLabel" parent="Window/Panel/VBoxContainer" unique_id=1174735237]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -74,16 +91,20 @@ bbcode_enabled = true
 context_menu_enabled = true
 selection_enabled = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Window/Panel/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/Panel/VBoxContainer" unique_id=960068476]
 layout_mode = 2
 alignment = 2
 
-[node name="LineCommand" type="LineEdit" parent="Window/Panel/VBoxContainer/HBoxContainer"]
+[node name="LineCommand" type="LineEdit" parent="Window/Panel/VBoxContainer/HBoxContainer" unique_id=967276582]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_ls17k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdnhl")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qdnhl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qdnhl")
 
-[node name="ButtonSend" type="Button" parent="Window/Panel/VBoxContainer/HBoxContainer"]
+[node name="ButtonSend" type="Button" parent="Window/Panel/VBoxContainer/HBoxContainer" unique_id=2039092047]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
@@ -91,17 +112,19 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 text = "WINDOW_CONSOLE_BUTTON_SEND"
 
-[node name="PopupInputHelp" type="PopupMenu" parent="Window"]
+[node name="PopupInputHelp" type="PopupMenu" parent="Window" unique_id=973164637]
 unique_name_in_owner = true
 handle_input_locally = false
+oversampling_override = 1.0
 position = Vector2i(2, 219)
 size = Vector2i(191, 8)
 always_on_top = true
 max_size = Vector2i(16384, 141)
+theme = ExtResource("3_ls17k")
 theme_type_variation = &"input_help"
 allow_search = false
 
-[node name="PanelBackground" type="Panel" parent="."]
+[node name="PanelBackground" type="Panel" parent="." unique_id=813180628]
 unique_name_in_owner = true
 process_mode = 3
 layout_mode = 1

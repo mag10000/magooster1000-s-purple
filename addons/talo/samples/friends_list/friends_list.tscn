@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxy83rqs3i7v"]
 
 [ext_resource type="Script" uid="uid://78stqdsnxi4m" path="res://addons/talo/samples/friends_list/scripts/friends_list.gd" id="1_friends_list"]
+[ext_resource type="PackedScene" uid="uid://dif2sold0sni2" path="res://scenes/main_window.tscn" id="2_ft0i0"]
 
 [node name="FriendsList" type="Node2D" unique_id=1271951708]
 script = ExtResource("1_friends_list")
@@ -205,6 +206,11 @@ placeholder_text = "Share an update with your friends..."
 [node name="SendButton" type="Button" parent="Control/BottomPanel/HBoxContainer" unique_id=255480404]
 layout_mode = 2
 text = "Broadcast"
+
+[node name="MainWindow" parent="." unique_id=688536160 instance=ExtResource("2_ft0i0")]
+visible = false
+z_index = 17
+mouse_filter = 2
 
 [connection signal="text_submitted" from="Control/BottomPanel/HBoxContainer/BroadcastInput" to="." method="_on_broadcast_input_text_submitted"]
 [connection signal="pressed" from="Control/BottomPanel/HBoxContainer/SendButton" to="." method="_on_send_broadcast_pressed"]

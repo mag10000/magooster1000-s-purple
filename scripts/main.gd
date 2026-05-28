@@ -7,7 +7,6 @@ var token = Token.token
 func _ready(): 
 	if not account.logged_in:
 		get_tree().change_scene_to_file("res://godot google auth/main.tscn")
-	
 	get_scores()
 
 func get_scores():

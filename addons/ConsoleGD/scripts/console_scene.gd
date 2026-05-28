@@ -258,6 +258,3 @@ func _on_command_entered(text:String):
 	
 	_line_command.set_text("")
 	_update_popup_input_help()
-
-
-

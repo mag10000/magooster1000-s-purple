@@ -133,3 +133,6 @@ TextEdit/colors/word_highlighted_color = Color(0.5, 0.5, 0.5, 0.25)
 TextEdit/fonts/font = ExtResource("1_mimdh")
 TextEdit/styles/focus = null
 TextEdit/styles/normal = SubResource("StyleBoxFlat_j7sg8")
+Window/colors/title_outline_modulate = Color(0, 0, 0, 1)
+Window/styles/embedded_border = SubResource("StyleBoxFlat_j7sg8")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_j7sg8")
