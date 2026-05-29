@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="7_xk0kq"]
 [ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="8_gchx4"]
 [ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="9_gnw4j"]
+[ext_resource type="PackedScene" uid="uid://fmxre1wg6gnq" path="res://scenes/lineeditemojibutton.tscn" id="11_sf4r3"]
 
 [sub_resource type="Resource" id="Resource_swdu2"]
 resource_local_to_scene = true
@@ -125,6 +126,10 @@ grow_vertical = 2
 placeholder_text = "player username"
 caret_blink = true
 metadata/_edit_use_anchors_ = true
+
+[node name="lineeditemojibutton" parent="LineEdit" unique_id=1629038054 instance=ExtResource("11_sf4r3")]
+layout_mode = 1
+offset_left = -28.0
 
 [node name="title" type="RichTextLabel" parent="." unique_id=678727529]
 layout_mode = 1

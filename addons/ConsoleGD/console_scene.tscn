@@ -135,3 +135,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_force_pass_scroll_events = false
 theme_type_variation = &"PanelBackground"
+
+[connection signal="meta_clicked" from="Window/Panel/VBoxContainer/TextBox" to="." method="_on_text_box_meta_clicked"]

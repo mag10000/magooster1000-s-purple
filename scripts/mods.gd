@@ -93,7 +93,7 @@ func load_mod(path, filename):
 
 
 func _on_download_request_request_completed(result, response_code, headers, body):
-	read_mod_dir("user://mods")
+	read_mod_dir(OS.get_user_data_dir() + "/mods")
 
 
 func _on_open_folder_pressed():

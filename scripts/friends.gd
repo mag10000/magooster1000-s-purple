@@ -8,7 +8,6 @@ var requests = []
 func _ready():
 	if account.logged_in:
 		var res := await Talo.player_presence.update_presence(true)
-	$FriendsPanel/VBoxContainer/ScrollContainer/VBoxContainer/Button.queue_free()
 	$RichTextLabel.text = ""
 	Talo.player_presence.presence_changed.connect(_on_presence_changed)
 

@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://e0udgbms67f3"]
 
 [ext_resource type="FontFile" uid="uid://dtwf67p02axqi" path="res://noto sans/Noto_Sans_Color_Emoji/NotoColorEmoji-Regular.ttf" id="1_1y24a"]
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_s5bpt"]
+[ext_resource type="Texture2D" uid="uid://4ivhn45e6lhc" path="res://art/icons8 emoji icons/microsoft/windows 10.png" id="2_gm0ql"]
+[ext_resource type="Script" uid="uid://p80trppvq8ux" path="res://scripts/emoji_button.gd" id="4_ki2sm"]
 
 [node name="EmojiButton" type="Button" unique_id=1010414271]
+custom_minimum_size = Vector2(35, 35)
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_s5bpt")
 theme_override_fonts/font = ExtResource("1_1y24a")
-flat = true
+icon = ExtResource("2_gm0ql")
+expand_icon = true
+script = ExtResource("4_ki2sm")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

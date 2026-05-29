@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://fmxre1wg6gnq"]
+
+[ext_resource type="Texture2D" uid="uid://c87tha10dxfod" path="res://art/icons8 emoji icons/emoji.png" id="1_64rd7"]
+[ext_resource type="Script" uid="uid://ywaypb1s336c" path="res://scenes/lineeditemojibutton.gd" id="2_d6f2o"]
+
+[node name="lineeditemojibutton" type="Button" unique_id=1629038054]
+custom_minimum_size = Vector2(26, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("1_64rd7")
+expand_icon = true
+script = ExtResource("2_d6f2o")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

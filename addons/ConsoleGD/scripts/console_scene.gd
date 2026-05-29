@@ -258,3 +258,7 @@ func _on_command_entered(text:String):
 	
 	_line_command.set_text("")
 	_update_popup_input_help()
+
+
+func _on_text_box_meta_clicked(meta):
+	OS.shell_open(str(meta))

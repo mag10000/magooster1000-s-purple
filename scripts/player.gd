@@ -24,7 +24,7 @@ func _ready():
 	Console.print("Welcome to the console.")
 	Console.print("type \"/help\" to get a list of commands.")
 	add_command("help",list_commands,"List all the commands.")
-	
+	add_command("generate_emoji_list",Emoji.parser,"Create a file with all emoji categories and emojis.",)
 
 func list_commands(args):
 	Console.print("Commands:")

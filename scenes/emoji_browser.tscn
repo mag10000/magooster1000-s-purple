@@ -2,13 +2,15 @@
 
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_xw4yo"]
 [ext_resource type="Script" uid="uid://bci1grvb1xdvi" path="res://scripts/emoji_browser.gd" id="1_y2vaa"]
+[ext_resource type="Texture2D" uid="uid://c84bw2ip82ikk" path="res://art/icons8 emoji icons/icons8-search-48.png" id="3_cmvlx"]
 
 [node name="emoji_browse" type="Panel" unique_id=1175257485]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -696.0
-offset_bottom = -437.0
+offset_left = 639.0
+offset_top = 27.0
+offset_bottom = -352.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xw4yo")
@@ -19,14 +21,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 31.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=1430231081]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=2068340367]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 12
 
 [node name="atribution" type="RichTextLabel" parent="." unique_id=618635273]
 layout_mode = 1
@@ -39,7 +42,38 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "emoji icons by [url=https://icons8.com/]icons8[/url]"
+text = "emojis and seach bar icon by [url=https://icons8.com/]icons8[/url]"
 fit_content = true
 
+[node name="Button" type="Button" parent="." unique_id=1160365212]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -26.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "X"
+
+[node name="LineEdit" type="TextEdit" parent="." unique_id=515821820]
+layout_mode = 0
+offset_right = 487.0
+offset_bottom = 31.0
+theme = ExtResource("1_xw4yo")
+placeholder_text = "search"
+
+[node name="Button" type="Button" parent="LineEdit" unique_id=1011693823]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("3_cmvlx")
+expand_icon = true
+
 [connection signal="meta_clicked" from="atribution" to="." method="_on_atribution_meta_clicked"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LineEdit/Button" to="." method="_on_search_pressed"]

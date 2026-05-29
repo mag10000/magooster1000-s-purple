@@ -27,17 +27,29 @@ func _add_chat_message(message):
 
 func _on_button_pressed():
 	var id
+	print("----------")
+	print($LineEdit/LineEdit.text)
+	print("----------")
+	if $LineEdit/LineEdit.text == "self":
+		print("Helloooo>>>>")
+		$RichTextLabel.text += "
+[b]%s:[/b] %s" % [account.usrn, $LineEdit.text]
+		return
 
 	var search_page := await Talo.players.search($LineEdit/LineEdit.text)
+	if not search_page:
+		return
 	if search_page.count == 0:
 		print("No players found")
 		return
 
 	var identifiers = []
 	var ids = []
+	var players = []
 	for player in search_page.players:
 		identifiers.append(player.get_alias().identifier)
 		ids.append(player.id)
+		players.append(player)
 	
 	var channel_name = identifiers[0] + ids[0]
 	
@@ -55,21 +67,35 @@ func _on_button_pressed():
 
 	Talo.channels.send_message(id,$LineEdit.text)
 	Talo.leaderboards.add_entry("message_storage",int(Time.get_datetime_string_from_system()),{"message": "[b]%s:[/b] %s" % [Talo.current_alias.identifier, $LineEdit.text],"channel" : id})
+	if players[0].aliases[0].identifier == account.usrn:
+		$RichTextLabel.text += "[b]%s:[/b] %s" % [account.usrn, $LineEdit.text]
 	$LineEdit.text = ""
 
 func _on_line_edit_text_submitted(new_text):
 	var id
+	print("----------")
+	print($LineEdit/LineEdit.text)
+	print("----------")
+	if $LineEdit/LineEdit.text == "self":
+		print("Helloooo>>>>")
+		$RichTextLabel.text += "
+[b]%s:[/b] %s" % [account.usrn, $LineEdit.text]
+		return
 
 	var search_page := await Talo.players.search($LineEdit/LineEdit.text)
+	if not search_page:
+		return
 	if search_page.count == 0:
 		print("No players found")
 		return
 
 	var identifiers = []
 	var ids = []
+	var players = []
 	for player in search_page.players:
 		identifiers.append(player.get_alias().identifier)
 		ids.append(player.id)
+		players.append(player)
 	
 	var channel_name = identifiers[0] + ids[0]
 	
@@ -87,6 +113,8 @@ func _on_line_edit_text_submitted(new_text):
 
 	Talo.channels.send_message(id,$LineEdit.text)
 	Talo.leaderboards.add_entry("message_storage",int(Time.get_datetime_string_from_system()),{"message": "[b]%s:[/b] %s" % [Talo.current_alias.identifier, $LineEdit.text],"channel" : id})
+	if players[0].aliases[0].identifier == account.usrn:
+		$RichTextLabel.text += "[b]%s:[/b] %s" % [account.usrn, $LineEdit.text]
 	$LineEdit.text = ""
 
 func _process(delta):

@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="10_hnlqg"]
 [ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="11_dq4w0"]
 [ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="12_uduus"]
+[ext_resource type="PackedScene" uid="uid://fmxre1wg6gnq" path="res://scenes/lineeditemojibutton.tscn" id="14_4edun"]
 
 [sub_resource type="Resource" id="Resource_ubmla"]
 resource_local_to_scene = true
@@ -210,16 +211,9 @@ anchor_bottom = 1.0
 text = "send"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="LineEdit" unique_id=1379289181]
+[node name="lineeditemojibutton" parent="LineEdit" unique_id=1629038054 instance=ExtResource("14_4edun")]
 layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -4.0
-grow_horizontal = 0
-grow_vertical = 2
-text = "😃"
+offset_left = -28.0
 
 [node name="title" type="RichTextLabel" parent="." unique_id=678727529]
 layout_mode = 1
