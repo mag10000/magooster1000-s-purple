@@ -43,6 +43,8 @@ func _on_player_identified(player: TaloPlayer) -> void:
 		if save.name == "settings":
 			account.settings = save.content
 			account.settings_loaded = true
+		if save.name == "fav_emojis":
+			account.fav_emojis = save.content["emojis"]
 	$UI/MarginContainer/VBoxContainer/Home.disabled = false
 	$UI/MarginContainer/VBoxContainer/ChangePassword.disabled = false
 	$UI/MarginContainer/VBoxContainer/ChangeEmail.disabled = false

@@ -17,10 +17,15 @@ func _ready():
 		grid.name = i
 		$ScrollContainer/VBoxContainer.add_child(grid)
 	for r in Emoji.emojis:
+		
 		var button = preload("res://scenes/emoji_button.tscn").instantiate()
+		if $ScrollContainer/VBoxContainer/favorites.get_children().size() < 4:
+			button.dir_special = true
 		button.icon = load(Emoji.emojis[r]["path"])
 		button.tooltip_text = r.replace("_multia","")
 		get_node("ScrollContainer/VBoxContainer/" + Emoji.emojis[r]["category"]).add_child(button)
+	for r in account.fav_emojis:
+		add_favorite(r)
 
 func emoji_pressed(emoji_name):
 	print(emoji_name)
@@ -45,3 +50,16 @@ func _on_search_pressed():
 					pass
 				else:
 					emoji_child.hide()
+
+func add_to_favorites(emoji_name):
+	if not account.fav_emojis.has(emoji_name):
+		print("Adding ",emoji_name, " to favorites")
+		account.fav_emojis.insert(0,emoji_name)
+		Talo.saves.create_save("fav_emojis",{"emojis" : account.fav_emojis})
+		add_favorite(emoji_name)
+
+func add_favorite(emoji_name):
+	var button = preload("res://scenes/emoji_button.tscn").instantiate()
+	button.icon = load(Emoji.emojis[emoji_name]["path"])
+	button.tooltip_text = emoji_name.replace("_multia","")
+	$ScrollContainer/VBoxContainer/favorites.add_child(button)

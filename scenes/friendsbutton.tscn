@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhuaxyxw5h0j2"]
+
+[ext_resource type="Texture2D" uid="uid://dkoau2iohakbe" path="res://art/cross.png" id="1_q47gw"]
+[ext_resource type="Script" uid="uid://bwj3p3a376gb2" path="res://scenes/friendsbutton.gd" id="2_cp5on"]
+
+[node name="Button" type="Button" unique_id=11691906]
+text = "MyFriend1"
+icon = ExtResource("1_q47gw")
+expand_icon = true
+script = ExtResource("2_cp5on")

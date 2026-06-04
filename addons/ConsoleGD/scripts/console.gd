@@ -39,21 +39,21 @@ func _ready():
 
 
 func print_custom(text:String):
-	_log += text
-	print_rich(text)
-	output_print.emit(text)
+	_log += str(text)
+	print_rich(str(text))
+	output_print.emit(str(text))
 
 
 func print(text, stacktrace:bool = false, timestamp:bool = true, align:String = "left", color:String = "white", tag:String = "INF"):
-	print_custom(format_msg(text, timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
+	print_custom(format_msg(str(text), timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
 
 
 func printerr(text, stacktrace:bool = false, timestamp:bool = true, align:String = "left", color:String = "#ff3d3d", tag:String = "ERR"):
-	print_custom(format_msg(text, timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
+	print_custom(format_msg(str(text), timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
 
 
 func printwarn(text, stacktrace:bool = false, timestamp:bool = true, align:String = "left", color:String = "#ffe52d", tag:String = "WRN"):
-	print_custom(format_msg(text, timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
+	print_custom(format_msg(str(text), timestamp, align, color, tag) + (_format_stack(get_stack()) if stacktrace else ""))
 
 
 func format_msg(text:String, timestamp:bool = true, align:String = "", color:String = "", tag:String = ""):

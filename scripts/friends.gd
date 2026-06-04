@@ -3,13 +3,22 @@ extends Control
 var friends = []
 var outgoing_friends = []
 var requests = []
+var _friends: Array[TaloPlayerAlias] = []
+var _pending_requests: Array[TaloPlayerAlias] = []
+var _outgoing_requests: Array[TaloPlayerAlias] = []
 
 #var presence := await Talo.player_presence.get_presence(player_id)
 func _ready():
 	if account.logged_in:
 		var res := await Talo.player_presence.update_presence(true)
+	else:
+		return
 	$RichTextLabel.text = ""
 	Talo.player_presence.presence_changed.connect(_on_presence_changed)
+	update_friends()
+	$FriendsPanel/VBoxContainer/friends/VBoxContainer/Button.queue_free()
+	$FriendsPanel/VBoxContainer/pending/VBoxContainer/Button.queue_free()
+	$FriendsPanel/VBoxContainer/requests/VBoxContainer/Button.queue_free()
 
 
 func _process(delta):
@@ -27,12 +36,40 @@ func _process(delta):
 		$PopupGray/Panel.theme = load("res://main theme light.tres")
 
 func update_friends():
-	friends = await FriendsManager.load_friends()
-	outgoing_friends = await FriendsManager.load_outgoing_requests()
-	requests = await FriendsManager.load_pending_requests()
-	if not friends.size() > 0:
+	var test = await Talo.player_relationships.get_subscriptions()
+	print(test.subscriptions[0].subscriber.identifier)
+	await get_tree().create_timer(2).timeout
+	refresh_all_data()
+	friends = get_friends()
+	outgoing_friends = get_outgoing_requests() 
+	requests = get_pending_requests() 
+	if friends.size() < 1:
 		$FriendsPanel/VBoxContainer/FriendsLabel.hide()
 		$FriendsPanel/VBoxContainer/friends.hide()
+	else:
+		$FriendsPanel/VBoxContainer/FriendsLabel.show()
+		$FriendsPanel/VBoxContainer/friends.show()
+	if outgoing_friends.size() < 1:
+		$FriendsPanel/VBoxContainer/PendingLabel.hide()
+		$FriendsPanel/VBoxContainer/pending.hide()
+	else:
+		$FriendsPanel/VBoxContainer/PendingLabel.show()
+		$FriendsPanel/VBoxContainer/pending.show()
+	if requests.size() < 1:
+		$FriendsPanel/VBoxContainer/RequestsLabel.hide()
+		$FriendsPanel/VBoxContainer/requests.hide()
+	else:
+		$FriendsPanel/VBoxContainer/RequestsLabel.show()
+		$FriendsPanel/VBoxContainer/requests.show()
+	Console.print(str(requests) + ", " + str(outgoing_friends) + ", " + str(friends))
+	for f in friends:
+		pass
+	for p in outgoing_friends:
+		pass
+	for r in requests:
+		pass
+	await get_tree().create_timer(5).timeout
+	update_friends()
 
 func _on_attribution_meta_clicked(meta):
 	OS.shell_open(meta)
@@ -74,9 +111,11 @@ func _on_sendrequest_pressed():
 		Console.print("Friend request sent to %s" % alias.identifier,)
 		$"PopupGray/Panel/add friend".hide()
 		$PopupGray.hide()
+		update_friends()
 	else:
 		var text = $"PopupGray/Panel/add friend/friend_usrnm".text
 		Console.printerr("Failed to send request to %s" % alias.identifier,)
+		Console.printerr(success)
 		$"PopupGray/Panel/add friend/friend_usrnm".add_theme_color_override("font_color",Color.RED)
 		$"PopupGray/Panel/add friend/friend_usrnm".text = "ERROR"
 		await get_tree().create_timer(2).timeout
@@ -87,3 +126,43 @@ func _on_sendrequest_pressed():
 func _on_close_pressed():
 	$PopupGray.hide()
 	$"PopupGray/Panel/add friend".hide()
+
+# confirmed friends
+func load_friends() -> void:
+	var options := Talo.player_relationships.GetSubscriptionsOptions.new()
+	options.confirmed = Talo.player_relationships.ConfirmedFilter.CONFIRMED
+	var page := await Talo.player_relationships.get_subscriptions(options)
+	_friends.assign(page.subscriptions.map(func (sub: TaloPlayerAliasSubscription): return sub.subscribed_to))
+
+# unconfirmed requests other players have sent to the current player
+func load_pending_requests() -> void:
+	var options := Talo.player_relationships.GetSubscribersOptions.new()
+	options.confirmed = Talo.player_relationships.ConfirmedFilter.UNCONFIRMED
+	var page := await Talo.player_relationships.get_subscribers(options)
+	_pending_requests.assign(page.subscriptions.map(func (sub: TaloPlayerAliasSubscription): return sub.subscriber))
+# unconfirmed requests the current player has sent
+func load_outgoing_requests() -> void:
+	var options := Talo.player_relationships.GetSubscriptionsOptions.new()
+	options.confirmed = Talo.player_relationships.ConfirmedFilter.UNCONFIRMED
+	var page := await Talo.player_relationships.get_subscriptions(options)
+	_outgoing_requests.assign(page.subscriptions.map(func (sub: TaloPlayerAliasSubscription): return sub.subscribed_to))
+
+func get_friends() -> Array[TaloPlayerAlias]:
+	return _friends
+
+func get_pending_requests() -> Array[TaloPlayerAlias]:
+	return _pending_requests
+
+func get_outgoing_requests() -> Array[TaloPlayerAlias]:
+	return _outgoing_requests
+
+func accept_friend_request(alias: TaloPlayerAlias) -> bool:
+	return await Talo.player_relationships.confirm_subscription_from(alias.id)
+
+func remove_friend(alias: TaloPlayerAlias) -> bool:
+	return await Talo.player_relationships.unsubscribe_from(alias.id)
+
+func refresh_all_data() -> void:
+	await load_friends()
+	await load_outgoing_requests()
+	await load_pending_requests()

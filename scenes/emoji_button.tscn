@@ -2,16 +2,34 @@
 
 [ext_resource type="FontFile" uid="uid://dtwf67p02axqi" path="res://noto sans/Noto_Sans_Color_Emoji/NotoColorEmoji-Regular.ttf" id="1_1y24a"]
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_s5bpt"]
-[ext_resource type="Texture2D" uid="uid://4ivhn45e6lhc" path="res://art/icons8 emoji icons/microsoft/windows 10.png" id="2_gm0ql"]
+[ext_resource type="Texture2D" uid="uid://q144g6kc1atm" path="res://art/icons8 emoji icons/fallback.png" id="3_ki2sm"]
 [ext_resource type="Script" uid="uid://p80trppvq8ux" path="res://scripts/emoji_button.gd" id="4_ki2sm"]
+[ext_resource type="Texture2D" uid="uid://dis8arobufsxg" path="res://art/icons8 emoji icons/reactions/heart.png" id="5_vj70m"]
 
 [node name="EmojiButton" type="Button" unique_id=1010414271]
 custom_minimum_size = Vector2(35, 35)
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_s5bpt")
 theme_override_fonts/font = ExtResource("1_1y24a")
-icon = ExtResource("2_gm0ql")
+icon = ExtResource("3_ki2sm")
 expand_icon = true
 script = ExtResource("4_ki2sm")
 
+[node name="MenuBar" type="MenuBar" parent="." unique_id=1746369987]
+visible = false
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="add to favorites" type="Button" parent="MenuBar" unique_id=494345467]
+layout_mode = 0
+offset_left = -147.0
+offset_bottom = 35.0
+text = "Add to favorites"
+icon = ExtResource("5_vj70m")
+expand_icon = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="MenuBar/add to favorites" to="." method="_on_add_to_favorites_pressed"]

@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://dr4y2ehw1ke55" path="res://art/multiple-users-silhouette.png" id="3_kuxn5"]
 [ext_resource type="Texture2D" uid="uid://dkoau2iohakbe" path="res://art/cross.png" id="3_ombsv"]
 [ext_resource type="Script" uid="uid://e284dgyvyqe5" path="res://scenes/friends_panel.gd" id="3_s2fhl"]
-[ext_resource type="PackedScene" uid="uid://bhuaxyxw5h0j2" path="res://scenes/friendsbutton.tscn" id="4_lvvhv"]
 [ext_resource type="Texture2D" uid="uid://chcoigvqasltq" path="res://art/add-friend.png" id="4_vgxxm"]
 [ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="6_4315i"]
 [ext_resource type="Script" uid="uid://c2uej1h55sbf0" path="res://scripts/rich_text_label.gd" id="6_rtvlr"]
@@ -94,8 +93,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" parent="FriendsPanel/VBoxContainer/friends/VBoxContainer" unique_id=11691906 instance=ExtResource("4_lvvhv")]
+[node name="Button" type="Button" parent="FriendsPanel/VBoxContainer/friends/VBoxContainer" unique_id=1984361089]
 layout_mode = 2
+text = "MyFriend1"
+icon = ExtResource("3_ombsv")
+expand_icon = true
 
 [node name="PendingLabel" type="RichTextLabel" parent="FriendsPanel/VBoxContainer" unique_id=1395604917]
 layout_mode = 2

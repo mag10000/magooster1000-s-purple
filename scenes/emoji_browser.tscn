@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_xw4yo"]
 [ext_resource type="Script" uid="uid://bci1grvb1xdvi" path="res://scripts/emoji_browser.gd" id="1_y2vaa"]
 [ext_resource type="Texture2D" uid="uid://c84bw2ip82ikk" path="res://art/icons8 emoji icons/icons8-search-48.png" id="3_cmvlx"]
+[ext_resource type="PackedScene" uid="uid://bxralvf23dfoh" path="res://scenes/emojigrid.tscn" id="3_t7y6g"]
 
 [node name="emoji_browse" type="Panel" unique_id=1175257485]
 anchors_preset = 15
@@ -30,6 +31,15 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="favoritesLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=205553852]
+layout_mode = 2
+bbcode_enabled = true
+text = "[img=35x35]res://art/icons8 emoji icons/reactions/heart.png[/img] Favorites"
+fit_content = true
+
+[node name="favorites" parent="ScrollContainer/VBoxContainer" unique_id=420963814 instance=ExtResource("3_t7y6g")]
+layout_mode = 2
 
 [node name="atribution" type="RichTextLabel" parent="." unique_id=618635273]
 layout_mode = 1

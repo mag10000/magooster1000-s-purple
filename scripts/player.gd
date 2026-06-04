@@ -15,6 +15,7 @@ var dark_or_light = "dark"
 var light_bg = "4b4062"
 var dark_bg = "1a1525"
 var local_settings_loaded = false
+var fav_emojis = []
 
 func _ready():
 	get_window().title = "MP - magooster1000's purple"
