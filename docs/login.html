@@ -143,15 +143,14 @@ button {
                 }
 		else {
 			if (data.hasOwnProperty("verificationRequired")){
-                 		if (data.verificationRequired){
-					document.location = "https://mag10000.github.io/magooster1000-s-purple/verify?id=" + data.aliasId
+				document.location = "https://mag10000.github.io/magooster1000-s-purple/verify?id=" + data.aliasId
 				}
-				else {
-					document.location = "https://mag10000.github.io/magooster1000-s-purple/logged-in?id=" + data.aliasId
+			if (data.hasOwnProperty("sessionToken")){
+				document.location = "https://mag10000.github.io/magooster1000-s-purple/logged-in?id=" + data.sessionToken
 				}
                  		
                 		
-                	}
+                	
 
 		}
 
