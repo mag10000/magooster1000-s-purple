@@ -126,7 +126,7 @@ button {
   placeholder="Email"
   maxlength="-1" />
 </div>
-<div class="container"><div class="cf-turnstile" data-sitekey="0x4AAAAAADgxYBFBPDiZx6yi" data-theme="light" data-size="normal" data-callback="onSuccess"></div></div>
+<div class="container"><div class="cf-turnstile" data-sitekey="0x4AAAAAADgxYBFBPDiZx6yi" data-theme="light" data-size="normal" data-callback="onSuccess" id="Turnstile"></div></div>
 <div class="container">
 <input
   type="password"
@@ -145,6 +145,8 @@ button {
 <script>
 	const button = document.querySelector(".buttondownload");
                 async function login() {
+				const TurnstileresponseToken = turnstile.getResponse("Turnstile");
+				console.log(TurnstileresponseToken)
                 const response = await fetch('https://api.trytalo.com/v1/players/auth/register', {
                   method: 'POST',
                   headers: {
