@@ -122,6 +122,18 @@ button {
   maxlength="-1" />
 </div>
 <div class="container">
+	 <script src="https://www.google.com/recaptcha/api.js"></script>
+	 <script>
+		   function onSubmit(token) {
+		     console.log("rechapcha");
+		   }
+	 </script>
+	 <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+<div class="container">
 <input
   type="password"
   class="input inputlogin"
