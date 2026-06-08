@@ -126,7 +126,7 @@ button {
   placeholder="Email"
   maxlength="-1" />
 </div>
-<div class="cf-turnstile" data-sitekey="0x4AAAAAADgxYBFBPDiZx6yi" data-theme="light" data-size="normal" data-callback="onSuccess"></div>
+<div class="container"><div class="cf-turnstile" data-sitekey="0x4AAAAAADgxYBFBPDiZx6yi" data-theme="light" data-size="normal" data-callback="onSuccess"></div></div>
 <div class="container">
 <input
   type="password"
@@ -215,8 +215,7 @@ async function handleFormSubmission(request) {
 
   if (validation.success) {
     // Token is valid - process the form
-    console.log("Valid submission from:", validation.hostname);
-    return processForm(body);
+    
   } else {
     // Token is invalid - reject the submission
     console.log("Invalid token:", validation["error-codes"]);
