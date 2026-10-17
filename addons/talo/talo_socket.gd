@@ -31,6 +31,11 @@ func _identify_player() -> void:
 	if not _socket_authenticated:
 		return
 
+	if not Talo.current_alias:
+		return
+	
+	if not Talo.current_alias.id:
+		return
 	var payload = {
 		playerAliasId = Talo.current_alias.id,
 		socketToken = _temp_socket_token
@@ -80,6 +85,7 @@ func send(req: String, data: Dictionary = {}) -> int:
 	if Talo.settings.log_requests:
 		print_rich("[color=orange]<-- WSS %s %s[/color]" % [req, data])
 
+	await get_tree().create_timer(1).timeout
 	return _socket.send_text(JSON.stringify({
 		req = req,
 		data = data

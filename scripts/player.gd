@@ -67,3 +67,15 @@ func load_local_saves():
 		var json_data = JSON.parse_string(text_data)
 		settings = json_data
 		local_settings_loaded = true
+
+func play_sound(sound : String):
+	var audio_stream_player = AudioStreamPlayer.new()
+	match sound:
+		"random_blip":
+			audio_stream_player.stream = [load("res://sfx/Purple blip 1.wav"),load("res://sfx/Purple blip 2.wav")].pick_random()
+		"blip1":
+			audio_stream_player.stream = load("res://sfx/Purple blip 1.wav")
+		"blip2":
+			audio_stream_player.stream = load("res://sfx/Purple blip 2.wav")
+	add_child(audio_stream_player)
+	audio_stream_player.play()

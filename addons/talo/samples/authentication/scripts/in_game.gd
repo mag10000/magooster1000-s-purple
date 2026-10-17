@@ -77,6 +77,7 @@ func _on_change_identifier_pressed() -> void:
 
 func _on_logout_pressed() -> void:
 	await Talo.player_auth.logout()
+	$"../../../.."._on_sign_out_button_pressed()
 	logout_success.emit()
 
 func _on_delete_pressed() -> void:

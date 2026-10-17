@@ -15,14 +15,14 @@ icon = ExtResource("3_ki2sm")
 expand_icon = true
 script = ExtResource("4_ki2sm")
 
-[node name="MenuBar" type="MenuBar" parent="." unique_id=1746369987]
+[node name="MenuBar" type="MenuBar" parent="." unique_id=517045265]
 visible = false
 z_index = 10
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="add to favorites" type="Button" parent="MenuBar" unique_id=494345467]
+[node name="add to favorites" type="Button" parent="MenuBar" unique_id=1751229683]
 layout_mode = 0
 offset_left = -147.0
 offset_bottom = 35.0
@@ -32,4 +32,3 @@ expand_icon = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
-[connection signal="pressed" from="MenuBar/add to favorites" to="." method="_on_add_to_favorites_pressed"]

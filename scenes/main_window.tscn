@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dswe67ryn0j81" path="res://scripts/settings.gd" id="10_3js5g"]
 [ext_resource type="Script" uid="uid://hp5pgdnw8smj" path="res://scripts/theme.gd" id="11_pvrrg"]
 [ext_resource type="Script" uid="uid://clmda7v77agc4" path="res://addons/localization_with_google_sheet/ui/language_option_button.gd" id="12_joqp0"]
+[ext_resource type="Script" uid="uid://batx1mt73wi6v" path="res://scenes/laungage.gd" id="13_6bwi7"]
 [ext_resource type="Script" uid="uid://bckbt8pqfnl1k" path="res://scripts/format_mode.gd" id="13_a462w"]
 [ext_resource type="Texture2D" uid="uid://d23fxmykkx6j8" path="res://art/Github-Octicons-Markdown-16.512.png" id="14_nrwni"]
 [ext_resource type="Texture2D" uid="uid://sprcjkx8prwx" path="res://art/Colebemis-Feather-Moon.512.png" id="15_dq3np"]
@@ -210,14 +211,21 @@ text = "Choose.."
 
 [node name="laungage" type="HBoxContainer" parent="Layout/Contents/settings/Panel/VBoxContainer" unique_id=984454809]
 layout_mode = 2
+script = ExtResource("13_6bwi7")
 
 [node name="Label" type="Label" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=546368257]
 layout_mode = 2
 text = "language:"
 
+[node name="TextureRect" type="TextureRect" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=1560716212]
+layout_mode = 2
+expand_mode = 2
+
 [node name="LanguageOptionButton" type="OptionButton" parent="Layout/Contents/settings/Panel/VBoxContainer/laungage" unique_id=1810786834]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("2_e1lce")
+expand_icon = true
 script = ExtResource("12_joqp0")
 metadata/_custom_type_script = "uid://clmda7v77agc4"
 

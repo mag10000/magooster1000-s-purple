@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgvn5k58lamos"]
+
+[ext_resource type="PackedScene" uid="uid://d26u26jufronm" path="res://addons/card_fan/src/card_set.tscn" id="1_dir50"]
+
+[node name="card games" type="Control" unique_id=1418922711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardSet" parent="." unique_id=1097688817 instance=ExtResource("1_dir50")]
+layout_mode = 1
+jokers = true

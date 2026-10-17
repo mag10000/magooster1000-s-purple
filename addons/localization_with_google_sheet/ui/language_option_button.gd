@@ -21,7 +21,7 @@ extends OptionButton
 
 # Only allow these languages
 const ALLOWED_LANGUAGES = [
-	"en", "zh", "zh_TW", "ko", "ja", "fr", "es", "de", "it", "pt_BR", "ru", "tr","zh_Hans","zh_Hant","hi"
+	"en", "zh", "zh_TW", "ko", "ja", "fr", "es", "de", "it", "pt_BR", "ru", "tr","zh_Hans","zh_Hant","hi","te",
 ]
 
 # Language code to human-readable name mapping (autonyms)
@@ -40,7 +40,8 @@ const LANGUAGE_NAMES = {
 	"it": "Italiano",
 	"pt_BR": "Português brasileiro",
 	"ru": "Русский",
-	"tr": "Türkçe"
+	"tr": "Türkçe",
+	"te": "తెలుగు",
 }
 
 # Helper: Extract language code from translation file path
@@ -81,11 +82,15 @@ func _ready():
 	clear()
 	_lang_codes.clear()
 	var langs = _get_available_languages()
+	langs.set(langs.size() - 1,"pt_BR")
+	langs.erase("pt_BR")
+	print(langs[0])
 	for lang in langs:
 		add_item(_get_language_display(lang))
 		_lang_codes.append(lang)
 	# Set current to match current locale
-	var current = TranslationServer.get_locale()
+	var current = TranslationServer.get_locale().replace("_US","").replace("_MX","")
+	print(TranslationServer.get_locale().replace("_US","").replace("_MX","").replace("_JP","").replace("_KR","").replace("_CN","").replace("_FR","").replace("_IN","").replace("_FR","").replace("_DE",""))
 	var idx = langs.find(current)
 	if idx != -1:
 		select(idx)

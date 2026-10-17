@@ -1,0 +1,69 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/card_fan/example/demo.gd" id="1_demo"]
+[ext_resource type="PackedScene" path="res://addons/card_fan/src/card_set.tscn" id="2_card_set"]
+
+[node name="CardFanDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_demo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 30.0
+offset_right = 250.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "🃏 CardFan 卡牌扇演示"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+text = "双击/上滑/摇杆释放: 出牌
+长按拖拽: 排序
++ / -: 加牌/减牌"
+horizontal_alignment = 1
+
+[node name="Status" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.3, 0.8, 1.0, 1)
+text = ""
+horizontal_alignment = 1
+
+[node name="CardSet" parent="." instance=ExtResource("2_card_set")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -140.0
+offset_right = 300.0
+offset_bottom = -100.0
+grow_vertical = 0
+show_debug_buttons = true
+debug_logging = true

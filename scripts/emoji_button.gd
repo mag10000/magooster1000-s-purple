@@ -20,14 +20,12 @@ func _on_pressed():
 func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed:
-			$MenuBar.show()
+			$"../../../../MenuBar".global_position = global_position
+			$"../../../../MenuBar".show()
+			$"../../../../MenuBar".icon = icon.resource_path.get_file().replace(".png","")
 
 func _input(event):
 	await get_tree().create_timer(0.1).timeout
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed:
-			$MenuBar.hide()
-
-
-func _on_add_to_favorites_pressed():
-	$"../../../..".add_to_favorites(icon.resource_path.get_file().replace(".png",""))
+			$"../../../../MenuBar".hide()

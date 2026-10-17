@@ -90,6 +90,7 @@ Button/styles/focus = SubResource("StyleBoxFlat_kigbd")
 Button/styles/hover = SubResource("StyleBoxFlat_kigbd")
 Button/styles/normal = SubResource("StyleBoxFlat_j7sg8")
 Button/styles/pressed = SubResource("StyleBoxFlat_mimdh")
+OptionButton/constants/icon_max_width = 30
 OptionButton/fonts/font = ExtResource("1_mimdh")
 OptionButton/styles/disabled = SubResource("StyleBoxFlat_j7sg8")
 OptionButton/styles/disabled_mirrored = SubResource("StyleBoxFlat_j7sg8")

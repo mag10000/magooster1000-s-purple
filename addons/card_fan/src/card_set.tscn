@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d26u26jufronm"]
+
+[ext_resource type="Script" uid="uid://qbap37d4oooe" path="res://addons/card_fan/src/card_set.gd" id="1_card_set"]
+[ext_resource type="PackedScene" path="res://addons/card_fan/src/joystick.tscn" id="2_joystick"]
+
+[node name="CardSet" type="Control" unique_id=1097688817]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -140.0
+offset_right = 300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_card_set")
+show_debug_buttons = true
+drag_long_press_duration = 0.5
+drag_long_press_move_threshold = 0.5
+debug_logging = true
+
+[node name="CardsContainer" type="Control" parent="." unique_id=228513360]
+anchors_preset = 0
+offset_left = 6.0
+offset_right = 6.0
+mouse_filter = 2
+
+[node name="DebugButtons" type="Control" parent="." unique_id=1071668928]
+visible = false
+custom_minimum_size = Vector2(20, 0)
+anchors_preset = 0
+
+[node name="AddCardBtn" type="Button" parent="DebugButtons" unique_id=1801684701]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -64.0
+offset_right = 101.0
+offset_bottom = -24.0
+text = "+ add card"
+
+[node name="CardCountLabel" type="Label" parent="DebugButtons" unique_id=1599036820]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 18
+text = "CardFan 调试"
+horizontal_alignment = 2
+
+[node name="RemoveCardBtn" type="Button" parent="DebugButtons" unique_id=591432370]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 40.0
+text = "- remove card"
+
+[node name="Joystick" parent="." unique_id=1001231419 instance=ExtResource("2_joystick")]
+layout_mode = 0

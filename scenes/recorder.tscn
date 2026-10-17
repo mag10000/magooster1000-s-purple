@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cxhtjk5l0i0wv"]
+
+[ext_resource type="Theme" uid="uid://bjkj60su1coln" path="res://main theme.tres" id="1_1t00h"]
+[ext_resource type="Script" uid="uid://b3lj2y8s8jqai" path="res://scenes/recorder.gd" id="1_evdyl"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_1t00h"]
+
+[node name="Recorder" type="Control" unique_id=801748402]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1t00h")
+script = ExtResource("1_evdyl")
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="." unique_id=1288746003]
+stream = SubResource("AudioStreamWAV_1t00h")
+bus = &"Record"
+
+[node name="Record" type="Button" parent="." unique_id=680398205]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 55.0
+text = "Record"
+
+[node name="Play" type="Button" parent="." unique_id=1425523204]
+layout_mode = 0
+offset_left = 93.0
+offset_right = 177.0
+offset_bottom = 55.0
+text = "Play"
+
+[node name="Done" type="Button" parent="." unique_id=651583154]
+layout_mode = 0
+offset_left = 187.0
+offset_right = 271.0
+offset_bottom = 55.0
+text = "Done"
+
+[node name="Label" type="Label" parent="." unique_id=1022971479]
+layout_mode = 0
+offset_top = 74.0
+offset_right = 270.0
+offset_bottom = 112.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Record" to="." method="_on_record_button_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_button_pressed"]

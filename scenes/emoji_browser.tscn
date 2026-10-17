@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bci1grvb1xdvi" path="res://scripts/emoji_browser.gd" id="1_y2vaa"]
 [ext_resource type="Texture2D" uid="uid://c84bw2ip82ikk" path="res://art/icons8 emoji icons/icons8-search-48.png" id="3_cmvlx"]
 [ext_resource type="PackedScene" uid="uid://bxralvf23dfoh" path="res://scenes/emojigrid.tscn" id="3_t7y6g"]
+[ext_resource type="Texture2D" uid="uid://dis8arobufsxg" path="res://art/icons8 emoji icons/reactions/heart.png" id="5_7ncq8"]
+[ext_resource type="Script" uid="uid://j4fain37vpem" path="res://scenes/menu_bar.gd" id="5_826qi"]
 
 [node name="emoji_browse" type="Panel" unique_id=1175257485]
 anchors_preset = 15
@@ -84,6 +86,23 @@ grow_vertical = 2
 icon = ExtResource("3_cmvlx")
 expand_icon = true
 
+[node name="MenuBar" type="MenuBar" parent="." unique_id=1868279864]
+visible = false
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_826qi")
+
+[node name="add to favorites" type="Button" parent="MenuBar" unique_id=1778476692]
+layout_mode = 0
+offset_left = -147.0
+offset_bottom = 35.0
+text = "Add to favorites"
+icon = ExtResource("5_7ncq8")
+expand_icon = true
+
 [connection signal="meta_clicked" from="atribution" to="." method="_on_atribution_meta_clicked"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LineEdit/Button" to="." method="_on_search_pressed"]
+[connection signal="pressed" from="MenuBar/add to favorites" to="MenuBar" method="_on_add_to_favorites_pressed"]

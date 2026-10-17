@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bhuaxyxw5h0j2"]
 
-[ext_resource type="Texture2D" uid="uid://dkoau2iohakbe" path="res://art/cross.png" id="1_q47gw"]
+[ext_resource type="Texture2D" uid="uid://u8s3wa6qpl14" path="res://art/icons8 emoji icons/internet/no wifi.png" id="1_cp5on"]
 [ext_resource type="Script" uid="uid://bwj3p3a376gb2" path="res://scenes/friendsbutton.gd" id="2_cp5on"]
 
 [node name="Button" type="Button" unique_id=11691906]
 text = "MyFriend1"
-icon = ExtResource("1_q47gw")
+icon = ExtResource("1_cp5on")
+text_overrun_behavior = 5
 expand_icon = true
 script = ExtResource("2_cp5on")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

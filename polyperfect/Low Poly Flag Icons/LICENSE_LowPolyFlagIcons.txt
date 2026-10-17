@@ -1,0 +1,13 @@
+Free for Commercial Use License (No Redistribution)
+Copyright (c) 2025 polyperfect s.r.o.
+
+Permission is granted to use, modify, and include these files in your own projects, including commercial projects. Attribution is appreciated but not required.
+
+You may NOT:
+- Redistribute these files or any modified versions as a standalone pack.
+- Resell, repackage, or claim these assets as your own.
+- Assume ownership of any asset by modifying it; modifications do not grant rights beyond this license.
+- Use these assets for:
+    • Non-Fungible Tokens (NFTs) or blockchain-based projects/products.
+    • Metaverse-related products or game-creation software/products.
+    • Inclusion in datasets for Generative AI programs, development of Generative AI, or as input to Generative AI programs.

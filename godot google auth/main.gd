@@ -9,8 +9,9 @@ extends Control
 var authed = false
 
 func _ready() -> void:
-	SupabaseAuth.auth_success.connect(_on_auth_success)
-	SupabaseAuth.auth_error.connect(_on_auth_error)
+	
+	OtherAccountAuth.auth_success.connect(_on_auth_success)
+	OtherAccountAuth.auth_error.connect(_on_auth_error)
 	
 	_check_existing_session()
 
@@ -23,12 +24,12 @@ func _on_auth_error(_error: String):
 
 
 func _check_existing_session():
-	var session = SupabaseAuth.load_session()
+	var session = OtherAccountAuth.load_session()
 	if session.has("access_token") and session.access_token != "":
 		if _is_token_expired(session):
 			print("Session expired, need to login again")
 			if session.has("refresh_token") and session.refresh_token != "":
-				SupabaseAuth.refresh_token(session.refresh_token)
+				OtherAccountAuth.refresh_token(session.refresh_token)
 			else:
 				_show_login_ui()
 		else:
@@ -123,7 +124,7 @@ func _show_authenticated_ui(session: Dictionary):
 	name_globe = _name
 	
 	await get_tree().create_timer(2).timeout
-	Talo.players.identify(SupabaseAuth.provider,_name)
+	Talo.players.identify(OtherAccountAuth.provider,_name)
 	Talo.players.identified.connect(identified)
 
 
@@ -142,7 +143,7 @@ func identified(player):
 		"Id" : user.get("id", "Unknown"),
 		"Email" : user.get("email", "Unknown"),
 		"Name" : _name,
-		"Service" : SupabaseAuth.provider
+		"Service" : OtherAccountAuth.provider
 	})
 	Talo.events.flush()
 	Talo.channels.get_channels()
@@ -163,13 +164,13 @@ func _on_sign_in_button_pressed() -> void:
 	sign_in_button.disabled = true
 	sign_in_button.text = tr("Opening browser for authentication...")
 	
-	SupabaseAuth.provider = "google"
-	SupabaseAuth.sign_in_with_google()
+	OtherAccountAuth.provider = "google"
+	OtherAccountAuth.sign_in_with_google()
 
 
 func _on_sign_out_button_pressed() -> void:
 	authed = false
-	SupabaseAuth.sign_out()
+	OtherAccountAuth.sign_out()
 	Talo.player_auth.logout()
 	_show_login_ui()
 
@@ -178,8 +179,8 @@ func _on_sign_in_button_discord_pressed():
 	$LoginPanelDiscord/SignInButtonDiscord.disabled = true
 	$LoginPanelDiscord/SignInButtonDiscord.text = tr("Opening browser for authentication...")
 	
-	SupabaseAuth.provider = "discord"
-	SupabaseAuth.sign_in_with_google()
+	OtherAccountAuth.provider = "discord"
+	OtherAccountAuth.sign_in_with_google()
 
 var url = ""
 func avatar(url_):

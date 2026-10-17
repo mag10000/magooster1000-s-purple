@@ -88,8 +88,10 @@ layout_mode = 2
 size_flags_vertical = 10
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[url=https://www.flaticon.com/free-icons/user]User icons created by Freepik - Flaticon"
+text = "[url=https://www.flaticon.com/free-icons/user]User icons created by Freepik - Flaticon
+[/url]"
 fit_content = true
+horizontal_alignment = 1
 
 [node name="MainWindow" parent="." unique_id=688536160 instance=ExtResource("10_4c57u")]
 visible = false

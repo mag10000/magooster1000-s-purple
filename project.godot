@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Magooster1000s Purple"
 run/main_scene="uid://0xklxw3hgltm"
 config/custom_user_dir_name="magooster1000's purple"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.101961, 0.0823529, 0.145098, 1)
 boot_splash/stretch_mode=3
 boot_splash/image="uid://bqhy6lf0krms2"
@@ -25,17 +25,24 @@ config/icon="uid://2qqerm1okbdh"
 boot_splash/minimum_display_time=8
 config/locale="es"
 
+[audio]
+
+buses/default_bus_layout="uid://txt37cindtxy"
+driver/enable_input=true
+
 [autoload]
 
 Token="*uid://ychxqfyklqqk"
 Talo="*uid://bpmdn8oc34pg7"
 Saver="*uid://bog3saou5uity"
-SupabaseAuth="*uid://c7gpms5gn3o73"
+OtherAccountAuth="*uid://c7gpms5gn3o73"
 Console="*uid://pxau0xoa5dnp"
-Cursor="*uid://djwpw33d4d8u7"
 account="*uid://i8tujkd2hcjk"
 MimeTypes="*uid://b2frjhfyqjt80"
 Emoji="*uid://b22jjcm551guh"
+GodotMods="*uid://b5xgnxvieji2d"
+Supabase="*uid://3e7sdfs8gpqt"
+Cursor="*uid://djwpw33d4d8u7"
 
 [display]
 
@@ -47,16 +54,24 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
+enabled=PackedStringArray("res://addons/ConsoleGD/plugin.cfg", "res://addons/GodotMods/plugin.cfg", "res://addons/discord_gd/plugin.cfg", "res://addons/localization_with_google_sheet/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/onscreenkeyboard/plugin.cfg", "res://addons/talo/plugin.cfg")
 
 [gdss]
 
 internal/initialized=true
 editor/use_minimap=true
 
+[input]
+
+"non-send enter"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
 [internationalization]
 
-locale/translations=["res://data/localization/translation_sheet/purple_translation_sheet_translation.en.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.es.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.ja.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.ko.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.zh_Hans.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.zh_Hant.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.fr.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.hi.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.pt_BR.translation", "res://data/localization/translation_sheet/purple_translation_sheet_translation.de.translation"]
+locale/translations=["res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.en_US.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.es_MX.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.ja_JP.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.ko_KR.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.zh_Hans_CN.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.zh_Hant_CN.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.fr_FR.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.hi_IN.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.te_IN.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.pt_BR.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.de_DE.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.en.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.es.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.ja.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.ko.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.zh_Hans.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.zh_Hant.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.fr.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.hi.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.te.translation", "res://data/localization/translation_sheet/Magooster1000s_Purple_translation_sheet_translation.de.translation"]
 
 [localization_with_google_sheet]
 

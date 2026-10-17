@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://du127ywx0a0i3"]
+
+[ext_resource type="Script" uid="uid://ogoifh1q71oy" path="res://addons/card_fan/src/card.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://bs1fqkse1l4jo" path="res://Cards/card backs/purple_back_intricate.png" id="2_orjt8"]
+
+[sub_resource type="RectangleShape2D" id="hit_shape"]
+size = Vector2(76.666664, 118)
+
+[node name="Card" type="Control" unique_id=1339237775]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 120.0
+script = ExtResource("1_card")
+
+[node name="CardSprite" type="TextureRect" parent="." unique_id=872741279]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+mouse_default_cursor_shape = 6
+texture = ExtResource("2_orjt8")
+expand_mode = 1
+
+[node name="HitArea" type="Area2D" parent="." unique_id=124684928]
+position = Vector2(62, 88)
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=292434682]
+position = Vector2(-1.6666679, 1)
+shape = SubResource("hit_shape")
